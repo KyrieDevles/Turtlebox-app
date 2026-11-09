@@ -437,6 +437,20 @@
     <data name="justify_effect" default="100" desc="Justify Ratio % - Effect" type="text" />
     <data name="justify_pendulum" default="100" desc="Justify Ratio % - Pendulum Effect" type="text" />
 
+    <!-- Menu groups (opened by tapping the effect / pendulum effect text) -->
+    <data name="cardtextmenu" desc="Effect Text" type="multi_select">
+        <item name="cardtext" value="cardtext" />
+        <item name="condense" value="condense" />
+        <item name="minline_effect" value="minline_effect" />
+        <item name="justify_effect" value="justify_effect" />
+    </data>
+    <data name="cardptextmenu" desc="Pendulum Effect" type="multi_select">
+        <item name="cardptext" value="cardptext" />
+        <item name="condense" value="condense" />
+        <item name="minline_pendulum" value="minline_pendulum" />
+        <item name="justify_pendulum" value="justify_pendulum" />
+    </data>
+
     <data name="cardstyles" default="series 10" desc="Card Template Styles">
         <item name="Series 10" value="none"  />
         <item name="Rush Duel" value="rushduel" />
@@ -1050,7 +1064,7 @@
             <text>{{cardcopy}}</text>
         </text>
         <!-- Pendulum text -->67 383 290
-        <text click="cardptext" index="5" keepWord="true" line-space-scale="1" singleline="false">
+        <text click="cardptextmenu" index="5" keepWord="true" line-space-scale="1" singleline="false">
             <size height="48" left="32" top="380" when="{{is_ymo}}" width="353" />
             <size height="29.5" left="30" top="390" when="{{is_rush}} and {{pendulum_is_small}}" width="360" />
             <size height="80" left="30" top="339" when="{{is_rush}} and {{pendulum_is_big}}" width="360" />
@@ -1074,7 +1088,7 @@
         
         
         <!-- EFFECT TEXT--> 
-        <text click="cardtext" index="2" keepWord="true" line-space-scale="1.0" singleline="false">
+        <text click="cardtextmenu" index="2" keepWord="true" line-space-scale="1.0" singleline="false">
             
             <size height="101.5" left="30" top="450" when="{{is_ymo}}" width="359" />
             
