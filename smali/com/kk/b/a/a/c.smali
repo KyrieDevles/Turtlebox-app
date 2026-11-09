@@ -38,6 +38,20 @@
 
 .field public justify:F
 
+.field public maxsize:F
+
+.field public minsize:F
+
+.field public linespace:F
+
+.field public letterspace:F
+
+.field public indent:F
+
+.field public valign:F
+
+.field public fitmode:F
+
 
 # direct methods
 .method public constructor <init>()V

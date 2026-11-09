@@ -257,7 +257,51 @@
 
     iput v0, p0, Lcom/kk/d/d;->justifyRatio:F
 
+    iget v0, p1, Lcom/kk/b/a/a/c;->maxsize:F
+
+    iput v0, p0, Lcom/kk/d/d;->maxSizePct:F
+
+    iget v0, p1, Lcom/kk/b/a/a/c;->minsize:F
+
+    iput v0, p0, Lcom/kk/d/d;->minSizePct:F
+
+    iget v0, p1, Lcom/kk/b/a/a/c;->valign:F
+
+    iput v0, p0, Lcom/kk/d/d;->vAlign:F
+
+    iget v0, p1, Lcom/kk/b/a/a/c;->fitmode:F
+
+    iput v0, p0, Lcom/kk/d/d;->fitMode:F
+
+    # line spacing multiplier (0 = keep the XML value)
+    iget v0, p1, Lcom/kk/b/a/a/c;->linespace:F
+
+    const/4 v1, 0x0
+
+    cmpl-float v1, v0, v1
+
+    if-lez v1, :cond_ls_skip
+
+    invoke-virtual {p0}, Lcom/kk/b/e/f;->getLineSpacingExtraCompat()F
+
+    move-result v1
+
+    invoke-virtual {p0, v1, v0}, Lcom/kk/b/e/f;->setLineSpacing(FF)V
+
+    :cond_ls_skip
+    # letter spacing in em (0 = normal)
+    iget v0, p1, Lcom/kk/b/a/a/c;->letterspace:F
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/e/f;->setLetterSpacing(F)V
+
+    # first-line indent: non-breaking spaces at the start of every paragraph
     iget-object v0, p1, Lcom/kk/b/a/a/c;->n:Ljava/lang/String;
+
+    iget v1, p1, Lcom/kk/b/a/a/c;->indent:F
+
+    invoke-static {v0, v1}, Lcom/kk/b/e/f;->indentText(Ljava/lang/String;F)Ljava/lang/String;
+
+    move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/kk/b/e/f;->setText(Ljava/lang/CharSequence;)V
 
@@ -450,4 +494,90 @@
     iget-object v0, p0, Lcom/kk/b/e/f;->b:Lcom/kk/b/a/b/d;
 
     return-object v0
+.end method
+
+.method public static indentText(Ljava/lang/String;F)Ljava/lang/String;
+    .locals 5
+
+    if-eqz p0, :cond_ret
+
+    const/4 v0, 0x0
+
+    cmpl-float v0, p1, v0
+
+    if-lez v0, :cond_ret
+
+    const/high16 v0, 0x3f000000    # 0.5f
+
+    add-float/2addr v0, p1
+
+    float-to-int v0, v0
+
+    const/4 v1, 0x1
+
+    if-lt v0, v1, :cond_ret
+
+    const/16 v1, 0x8
+
+    if-le v0, v1, :cond_k_ok
+
+    move v0, v1
+
+    :cond_k_ok
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const/4 v2, 0x0
+
+    :goto_pad
+    if-ge v2, v0, :cond_pad_done
+
+    const/16 v3, 0xa0
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_pad
+
+    :cond_pad_done
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "\n"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "\n"
+
+    invoke-virtual {p0, v3, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v3
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    :cond_ret
+    return-object p0
 .end method

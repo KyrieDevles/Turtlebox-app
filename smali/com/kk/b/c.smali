@@ -1306,6 +1306,216 @@
 
     :cond_justify_skip
 
+    # ---- PATCH: <maxsize> element -> TextData.maxsize (0 = not set) ----
+    invoke-virtual {p1}, Lcom/kk/b/a/b/c;->getMaxSize()[Lcom/kk/b/c/h;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->a([Lcom/kk/b/c/i;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v0, :cond_maxsize_skip
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_maxsize_skip
+
+    :try_maxsize_s
+    invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v0
+
+    iput v0, v1, Lcom/kk/b/a/a/c;->maxsize:F
+    :try_maxsize_e
+    .catch Ljava/lang/NumberFormatException; {:try_maxsize_s .. :try_maxsize_e} :cond_maxsize_skip
+
+    :cond_maxsize_skip
+
+    # ---- PATCH: <minsize> element -> TextData.minsize (0 = not set) ----
+    invoke-virtual {p1}, Lcom/kk/b/a/b/c;->getMinSize()[Lcom/kk/b/c/h;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->a([Lcom/kk/b/c/i;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v0, :cond_minsize_skip
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_minsize_skip
+
+    :try_minsize_s
+    invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v0
+
+    iput v0, v1, Lcom/kk/b/a/a/c;->minsize:F
+    :try_minsize_e
+    .catch Ljava/lang/NumberFormatException; {:try_minsize_s .. :try_minsize_e} :cond_minsize_skip
+
+    :cond_minsize_skip
+
+    # ---- PATCH: <linespace> element -> TextData.linespace (0 = not set) ----
+    invoke-virtual {p1}, Lcom/kk/b/a/b/c;->getLineSpace()[Lcom/kk/b/c/h;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->a([Lcom/kk/b/c/i;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v0, :cond_linespace_skip
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_linespace_skip
+
+    :try_linespace_s
+    invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v0
+
+    iput v0, v1, Lcom/kk/b/a/a/c;->linespace:F
+    :try_linespace_e
+    .catch Ljava/lang/NumberFormatException; {:try_linespace_s .. :try_linespace_e} :cond_linespace_skip
+
+    :cond_linespace_skip
+
+    # ---- PATCH: <letterspace> element -> TextData.letterspace (0 = not set) ----
+    invoke-virtual {p1}, Lcom/kk/b/a/b/c;->getLetterSpace()[Lcom/kk/b/c/h;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->a([Lcom/kk/b/c/i;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v0, :cond_letterspace_skip
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_letterspace_skip
+
+    :try_letterspace_s
+    invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v0
+
+    iput v0, v1, Lcom/kk/b/a/a/c;->letterspace:F
+    :try_letterspace_e
+    .catch Ljava/lang/NumberFormatException; {:try_letterspace_s .. :try_letterspace_e} :cond_letterspace_skip
+
+    :cond_letterspace_skip
+
+    # ---- PATCH: <indent> element -> TextData.indent (0 = not set) ----
+    invoke-virtual {p1}, Lcom/kk/b/a/b/c;->getIndent()[Lcom/kk/b/c/h;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->a([Lcom/kk/b/c/i;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v0, :cond_indent_skip
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_indent_skip
+
+    :try_indent_s
+    invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v0
+
+    iput v0, v1, Lcom/kk/b/a/a/c;->indent:F
+    :try_indent_e
+    .catch Ljava/lang/NumberFormatException; {:try_indent_s .. :try_indent_e} :cond_indent_skip
+
+    :cond_indent_skip
+
+    # ---- PATCH: <valign> element -> TextData.valign (0 = not set) ----
+    invoke-virtual {p1}, Lcom/kk/b/a/b/c;->getVAlign()[Lcom/kk/b/c/h;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->a([Lcom/kk/b/c/i;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v0, :cond_valign_skip
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_valign_skip
+
+    :try_valign_s
+    invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v0
+
+    iput v0, v1, Lcom/kk/b/a/a/c;->valign:F
+    :try_valign_e
+    .catch Ljava/lang/NumberFormatException; {:try_valign_s .. :try_valign_e} :cond_valign_skip
+
+    :cond_valign_skip
+
+    # ---- PATCH: <fitmode> element -> TextData.fitmode (0 = not set) ----
+    invoke-virtual {p1}, Lcom/kk/b/a/b/c;->getFitMode()[Lcom/kk/b/c/h;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->a([Lcom/kk/b/c/i;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v0, :cond_fitmode_skip
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_fitmode_skip
+
+    :try_fitmode_s
+    invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v0
+
+    iput v0, v1, Lcom/kk/b/a/a/c;->fitmode:F
+    :try_fitmode_e
+    .catch Ljava/lang/NumberFormatException; {:try_fitmode_s .. :try_fitmode_e} :cond_fitmode_skip
+
+    :cond_fitmode_skip
+
     .line 305
     invoke-virtual {p1}, Lcom/kk/b/a/b/c;->getText()Ljava/lang/String;
 

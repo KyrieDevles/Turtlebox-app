@@ -19,6 +19,14 @@
 
 .field public justifyRatio:F
 
+.field public maxSizePct:F
+
+.field public minSizePct:F
+
+.field public vAlign:F
+
+.field public fitMode:F
+
 .field protected e:Z
 
 .field protected f:F
@@ -706,6 +714,51 @@
     mul-int/2addr v2, v6
 
     add-int v14, v1, v2
+
+    # ---- PATCH: vertical alignment (0 = top, 0.5 = center, 1 = bottom) ----
+    move-object/from16 v0, p0
+
+    iget v1, v0, Lcom/kk/d/a;->vAlign:F
+
+    const/4 v2, 0x0
+
+    cmpl-float v2, v1, v2
+
+    if-lez v2, :cond_va_done
+
+    invoke-virtual {v0}, Lcom/kk/d/a;->getHeight()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Lcom/kk/d/a;->getTotalPaddingTop()I
+
+    move-result v6
+
+    sub-int/2addr v2, v6
+
+    invoke-virtual {v0}, Lcom/kk/d/a;->getTotalPaddingBottom()I
+
+    move-result v6
+
+    sub-int/2addr v2, v6
+
+    invoke-virtual {v9}, Landroid/text/Layout;->getHeight()I
+
+    move-result v6
+
+    sub-int/2addr v2, v6
+
+    if-lez v2, :cond_va_done
+
+    int-to-float v2, v2
+
+    mul-float/2addr v2, v1
+
+    float-to-int v2, v2
+
+    add-int/2addr v14, v2
+
+    :cond_va_done
 
     .line 236
     invoke-interface {v12, v3, v4}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;

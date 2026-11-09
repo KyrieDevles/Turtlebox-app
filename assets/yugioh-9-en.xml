@@ -430,19 +430,63 @@
     <data name="minline_pendulum" default="0" desc="Minimum Lines - Pendulum Effect" type="text" />
     <data name="justify_effect" default="100" desc="Justify Ratio % - Effect" type="text" />
     <data name="justify_pendulum" default="100" desc="Justify Ratio % - Pendulum Effect" type="text" />
+    <data name="maxsize_effect" default="100" desc="Max Font Size % - Effect" type="text" />
+    <data name="minsize_effect" default="0" desc="Min Font Size % (0 = auto) - Effect" type="text" />
+    <data name="linespace_effect" default="0" desc="Line Spacing x (0 = default, e.g. 1.1) - Effect" type="text" />
+    <data name="letterspace_effect" default="0" desc="Letter Spacing em (e.g. 0.02) - Effect" type="text" />
+    <data name="indent_effect" default="0" desc="First-line Indent (spaces) - Effect" type="text" />
+    <data name="valign_effect" default="0" desc="Vertical Align - Effect">
+        <item name="top" value="0" />
+        <item name="center" value="0.5" />
+        <item name="bottom" value="1" />
+    </data>
+    <data name="fitmode_effect" default="1" desc="Fit Priority - Effect">
+        <item name="squeeze first" value="1" />
+        <item name="shrink first" value="2" />
+        <item name="balanced" value="3" />
+    </data>
+    <data name="maxsize_pendulum" default="100" desc="Max Font Size % - Pendulum Effect" type="text" />
+    <data name="minsize_pendulum" default="0" desc="Min Font Size % (0 = auto) - Pendulum Effect" type="text" />
+    <data name="linespace_pendulum" default="0" desc="Line Spacing x (0 = default, e.g. 1.1) - Pendulum Effect" type="text" />
+    <data name="letterspace_pendulum" default="0" desc="Letter Spacing em (e.g. 0.02) - Pendulum Effect" type="text" />
+    <data name="indent_pendulum" default="0" desc="First-line Indent (spaces) - Pendulum Effect" type="text" />
+    <data name="valign_pendulum" default="0" desc="Vertical Align - Pendulum Effect">
+        <item name="top" value="0" />
+        <item name="center" value="0.5" />
+        <item name="bottom" value="1" />
+    </data>
+    <data name="fitmode_pendulum" default="1" desc="Fit Priority - Pendulum Effect">
+        <item name="squeeze first" value="1" />
+        <item name="shrink first" value="2" />
+        <item name="balanced" value="3" />
+    </data>
 
     <!-- Menu groups (opened by tapping the effect / pendulum effect text) -->
     <data name="cardtextmenu" desc="Effect Text" type="multi_select">
         <item name="cardtext" value="cardtext" />
         <item name="condense" value="condense" />
+        <item name="fitmode_effect" value="fitmode_effect" />
+        <item name="maxsize_effect" value="maxsize_effect" />
+        <item name="minsize_effect" value="minsize_effect" />
         <item name="minline_effect" value="minline_effect" />
         <item name="justify_effect" value="justify_effect" />
+        <item name="linespace_effect" value="linespace_effect" />
+        <item name="letterspace_effect" value="letterspace_effect" />
+        <item name="indent_effect" value="indent_effect" />
+        <item name="valign_effect" value="valign_effect" />
     </data>
     <data name="cardptextmenu" desc="Pendulum Effect" type="multi_select">
         <item name="cardptext" value="cardptext" />
         <item name="condense" value="condense" />
+        <item name="fitmode_pendulum" value="fitmode_pendulum" />
+        <item name="maxsize_pendulum" value="maxsize_pendulum" />
+        <item name="minsize_pendulum" value="minsize_pendulum" />
         <item name="minline_pendulum" value="minline_pendulum" />
         <item name="justify_pendulum" value="justify_pendulum" />
+        <item name="linespace_pendulum" value="linespace_pendulum" />
+        <item name="letterspace_pendulum" value="letterspace_pendulum" />
+        <item name="indent_pendulum" value="indent_pendulum" />
+        <item name="valign_pendulum" value="valign_pendulum" />
     </data>
 
     <data name="cardstyles" default="series 10" desc="Card Template Styles">
@@ -1076,6 +1120,13 @@
             <condense>{{condense}}</condense>
             <minline>{{minline_pendulum}}</minline>
             <justify>{{justify_pendulum}}</justify>
+            <maxsize>{{maxsize_pendulum}}</maxsize>
+            <minsize>{{minsize_pendulum}}</minsize>
+            <linespace>{{linespace_pendulum}}</linespace>
+            <letterspace>{{letterspace_pendulum}}</letterspace>
+            <indent>{{indent_pendulum}}</indent>
+            <valign>{{valign_pendulum}}</valign>
+            <fitmode>{{fitmode_pendulum}}</fitmode>
             <text>{{cardptext}}</text>
             <visible>{{is_pendulum}}</visible>
         </text> 80 475 30
@@ -1100,6 +1151,13 @@
             <condense>{{condense}}</condense>
             <minline>{{minline_effect}}</minline>
             <justify>{{justify_effect}}</justify>
+            <maxsize>{{maxsize_effect}}</maxsize>
+            <minsize>{{minsize_effect}}</minsize>
+            <linespace>{{linespace_effect}}</linespace>
+            <letterspace>{{letterspace_effect}}</letterspace>
+            <indent>{{indent_effect}}</indent>
+            <valign>{{valign_effect}}</valign>
+            <fitmode>{{fitmode_effect}}</fitmode>
             <text>{{cardtext}}</text>
             <visible>{{is_neuron}} == false</visible>
         </text>

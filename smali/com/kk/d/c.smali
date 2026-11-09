@@ -612,7 +612,7 @@
 
 # virtual methods
 .method public a(Landroid/text/TextPaint;Ljava/lang/CharSequence;FF)F
-    .locals 8
+    .locals 9
 
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -701,6 +701,97 @@
     const/high16 v1, 0x3f800000    # clamp to 1.0
 
     :cond_floor_ok
+    move v8, v1
+
+    # ---- Fit priority: 1 = squeeze first (default), 2 = shrink first, 3 = balanced ----
+    iget-object v2, p0, Lcom/kk/d/c;->a:Lcom/kk/d/e;
+
+    instance-of v3, v2, Lcom/kk/d/a;
+
+    if-eqz v3, :cond_nomode
+
+    check-cast v2, Lcom/kk/d/a;
+
+    iget v3, v2, Lcom/kk/d/a;->fitMode:F
+
+    const/high16 v4, 0x40200000    # 2.5f
+
+    cmpl-float v4, v3, v4
+
+    if-ltz v4, :cond_m_lt25
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    add-float/2addr v4, v1
+
+    const/high16 v5, 0x40000000    # 2.0f
+
+    div-float/2addr v4, v5
+
+    move v1, v4
+
+    goto :cond_nomode
+
+    :cond_m_lt25
+    const/high16 v4, 0x3fc00000    # 1.5f
+
+    cmpl-float v4, v3, v4
+
+    if-ltz v4, :cond_nomode
+
+    const/high16 v1, 0x3f800000    # shrink first: phase 1 at normal width
+
+    :cond_nomode
+    # ---- Font size range, in percent of the configured size (0 = unchanged) ----
+    iget-object v2, p0, Lcom/kk/d/c;->a:Lcom/kk/d/e;
+
+    instance-of v3, v2, Lcom/kk/d/a;
+
+    if-eqz v3, :cond_nosize
+
+    check-cast v2, Lcom/kk/d/a;
+
+    iget v3, v2, Lcom/kk/d/a;->minSizePct:F
+
+    const/4 v4, 0x0
+
+    cmpl-float v4, v3, v4
+
+    if-lez v4, :cond_nominpct
+
+    mul-float/2addr v3, p3
+
+    const/high16 v4, 0x42c80000    # 100.0f
+
+    div-float/2addr v3, v4
+
+    move p4, v3
+
+    :cond_nominpct
+    iget v3, v2, Lcom/kk/d/a;->maxSizePct:F
+
+    const/4 v4, 0x0
+
+    cmpl-float v4, v3, v4
+
+    if-lez v4, :cond_nomaxpct
+
+    mul-float/2addr v3, p3
+
+    const/high16 v4, 0x42c80000    # 100.0f
+
+    div-float/2addr v3, v4
+
+    move p3, v3
+
+    :cond_nomaxpct
+    cmpg-float v3, p3, p4
+
+    if-gez v3, :cond_nosize
+
+    move p3, p4
+
+    :cond_nosize
     # Minimum Lines: cap the font size so at least N lines fit in the text box (height * 0.9 / N)
     iget-object v2, p0, Lcom/kk/d/c;->a:Lcom/kk/d/e;
 
@@ -820,7 +911,7 @@
 
     if-nez v5, :cond_apply
 
-    move v6, v1    # low = floor ratio
+    move v6, v8    # low = floor ratio (as set by Condense)
 
     const/high16 v7, 0x3f800000    # high = 1.0
 

@@ -34,6 +34,48 @@
     .end annotation
 .end field
 
+.field protected maxsize:[Lcom/kk/b/c/h;
+    .annotation runtime La/a/a/b;
+        a = "maxsize"
+    .end annotation
+.end field
+
+.field protected minsize:[Lcom/kk/b/c/h;
+    .annotation runtime La/a/a/b;
+        a = "minsize"
+    .end annotation
+.end field
+
+.field protected linespace:[Lcom/kk/b/c/h;
+    .annotation runtime La/a/a/b;
+        a = "linespace"
+    .end annotation
+.end field
+
+.field protected letterspace:[Lcom/kk/b/c/h;
+    .annotation runtime La/a/a/b;
+        a = "letterspace"
+    .end annotation
+.end field
+
+.field protected indent:[Lcom/kk/b/c/h;
+    .annotation runtime La/a/a/b;
+        a = "indent"
+    .end annotation
+.end field
+
+.field protected valign:[Lcom/kk/b/c/h;
+    .annotation runtime La/a/a/b;
+        a = "valign"
+    .end annotation
+.end field
+
+.field protected fitmode:[Lcom/kk/b/c/h;
+    .annotation runtime La/a/a/b;
+        a = "fitmode"
+    .end annotation
+.end field
+
 .field protected color:[Lcom/kk/b/c/h;
     .annotation runtime La/a/a/b;
         a = "color"
@@ -134,6 +176,62 @@
     .locals 1
 
     iget-object v0, p0, Lcom/kk/b/a/b/c;->justify:[Lcom/kk/b/c/h;
+
+    return-object v0
+.end method
+
+.method public getMaxSize()[Lcom/kk/b/c/h;
+    .locals 1
+
+    iget-object v0, p0, Lcom/kk/b/a/b/c;->maxsize:[Lcom/kk/b/c/h;
+
+    return-object v0
+.end method
+
+.method public getMinSize()[Lcom/kk/b/c/h;
+    .locals 1
+
+    iget-object v0, p0, Lcom/kk/b/a/b/c;->minsize:[Lcom/kk/b/c/h;
+
+    return-object v0
+.end method
+
+.method public getLineSpace()[Lcom/kk/b/c/h;
+    .locals 1
+
+    iget-object v0, p0, Lcom/kk/b/a/b/c;->linespace:[Lcom/kk/b/c/h;
+
+    return-object v0
+.end method
+
+.method public getLetterSpace()[Lcom/kk/b/c/h;
+    .locals 1
+
+    iget-object v0, p0, Lcom/kk/b/a/b/c;->letterspace:[Lcom/kk/b/c/h;
+
+    return-object v0
+.end method
+
+.method public getIndent()[Lcom/kk/b/c/h;
+    .locals 1
+
+    iget-object v0, p0, Lcom/kk/b/a/b/c;->indent:[Lcom/kk/b/c/h;
+
+    return-object v0
+.end method
+
+.method public getVAlign()[Lcom/kk/b/c/h;
+    .locals 1
+
+    iget-object v0, p0, Lcom/kk/b/a/b/c;->valign:[Lcom/kk/b/c/h;
+
+    return-object v0
+.end method
+
+.method public getFitMode()[Lcom/kk/b/c/h;
+    .locals 1
+
+    iget-object v0, p0, Lcom/kk/b/a/b/c;->fitmode:[Lcom/kk/b/c/h;
 
     return-object v0
 .end method
