@@ -1,0 +1,22 @@
+.class public interface abstract Lcom/kk/mse/widget/WheelView$b;
+.super Ljava/lang/Object;
+.source "WheelView.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/kk/mse/widget/WheelView;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "b"
+.end annotation
+
+
+# virtual methods
+.method public abstract a(ILjava/lang/String;)V
+.end method
+
+.method public abstract b(ILjava/lang/String;)V
+.end method

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="left_width">80.0dip</dimen>
+    <dimen name="margin_left">10.0dip</dimen>
+    <dimen name="margin_left2">5.0dip</dimen>
+    <dimen name="margin_right">10.0dip</dimen>
+    <dimen name="margin_right2">5.0dip</dimen>
+    <dimen name="title_height">44.0dip</dimen>
+    <dimen name="title_size">18.0sp</dimen>
+</resources>

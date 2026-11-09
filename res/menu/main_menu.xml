@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@android:drawable/ic_menu_save"
+        android:id="@id/item_export_image"
+        android:title="@string/menu_save_image"
+        android:showAsAction="always" />
+    <item
+        android:icon="@android:drawable/ic_menu_view"
+        android:id="@id/item_preview"
+        android:title="@string/preview"
+        android:showAsAction="always" />
+    <item
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:id="@id/item_save_as_set"
+        android:title="@string/menu_save_as_set"
+        android:showAsAction="always" />
+    <item
+        android:id="@id/item_zoomin"
+        android:title="@string/zoom_in" />
+    <item
+        android:id="@id/item_zoomout"
+        android:title="@string/zoom_out" />
+    <item
+        android:id="@id/item_zoomfit"
+        android:title="@string/zoom_fit" />
+    <item
+        android:id="@id/item_fix_font"
+        android:title="@string/fix_font" />
+    <item
+        android:id="@id/item_clear"
+        android:title="@string/menu_clear" />
+    <item
+        android:id="@id/item_save_set"
+        android:title="@string/menu_save_set" />
+    <item
+        android:id="@id/item_open_set"
+        android:title="@string/menu_open_set" />
+    <item
+        android:id="@id/item_share_image"
+        android:title="@string/share_image" />
+    <item
+        android:id="@id/item_about"
+        android:title="@string/about" />
+</menu>

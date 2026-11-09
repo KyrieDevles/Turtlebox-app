@@ -1,0 +1,1558 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<style height="613" savename="{{cardname}}" width="421">
+    <styleinfo>
+        <name>yugioh-10-en</name>
+        <desc>YGO Kyrie</desc>
+        <author>Original author:CaiCai</author>
+        <version>20160309</version>
+        <app-version>2</app-version>
+        <icon>icon_en.png</icon>
+        <url>yugioh-9-en.zip</url>
+    </styleinfo>
+
+    <data name="image_type" default="" desc="Artwork Type">
+        <item name="default" value="" />
+        <item name="no frame" value="noframe" />
+        <item name="full image" value="full" />
+    </data>
+    
+        <data name="evolvefactor" desc="Evolve Factor" type="multi_select">
+        <item name="evolvefactorslots" value="evolvefactorslots" />
+        <item name="evfactorslot1" value="evfactorslot1" />
+        <item name="evfactorslot2" value="evfactorslot2" />
+        <item name="evfactorslot3" value="evfactorslot3" />
+        <item name="evfactorslot4" value="evfactorslot4" />
+        <item name="evfactorslot5" value="evfactorslot5" />
+    </data>
+    
+        <data name="evolvefactorslots" default="slot" desc="Evolve Factor Slots">
+        <item name="off" value="" />
+        <item name="on" value="slot" />
+     </data>
+    
+        <data name="evfactorslot1" default="fire" desc="Slot 1">
+        <item name="None" value="none" />
+        <item name="Dark" value="dark" />
+        <item name="Divine" value="divine" />
+        <item name="Earth" value="earth" />
+        <item name="Fire" value="fire" />
+        <item name="Light" value="light" />
+        <item name="Water" value="water" />
+        <item name="Wind" value="wind" />
+        <item name="Dream" value="dream" />
+        <item name="Spell" value="spell" />
+        <item name="Trap" value="trap" />
+        <item name="Exclude" value="exclude" />
+    </data>
+    
+        <data name="evfactorslot2" default="fire" desc="Slot 2">
+        <item name="None" value="none" />
+        <item name="Dark" value="dark" />
+        <item name="Divine" value="divine" />
+        <item name="Earth" value="earth" />
+        <item name="Fire" value="fire" />
+        <item name="Light" value="light" />
+        <item name="Water" value="water" />
+        <item name="Wind" value="wind" />
+        <item name="Dream" value="dream" />
+        <item name="Spell" value="spell" />
+        <item name="Trap" value="trap" />
+        <item name="Exclude" value="exclude" />
+    </data>
+    
+        <data name="evfactorslot3" default="fire" desc="Slot 3">
+        <item name="None" value="none" />
+        <item name="Dark" value="dark" />
+        <item name="Divine" value="divine" />
+        <item name="Earth" value="earth" />
+        <item name="Fire" value="fire" />
+        <item name="Light" value="light" />
+        <item name="Water" value="water" />
+        <item name="Wind" value="wind" />
+        <item name="Dream" value="dream" />
+        <item name="Spell" value="spell" />
+        <item name="Trap" value="trap" />
+        <item name="Exclude" value="exclude" />
+    </data>
+    
+        <data name="evfactorslot4" default="fire" desc="Slot 4">
+        <item name="None" value="none" />
+        <item name="Dark" value="dark" />
+        <item name="Divine" value="divine" />
+        <item name="Earth" value="earth" />
+        <item name="Fire" value="fire" />
+        <item name="Light" value="light" />
+        <item name="Water" value="water" />
+        <item name="Wind" value="wind" />
+        <item name="Dream" value="dream" />
+        <item name="Spell" value="spell" />
+        <item name="Trap" value="trap" />
+        <item name="Exclude" value="exclude" />
+    </data>
+    
+        <data name="evfactorslot5" default="fire" desc="Slot 5">
+        <item name="None" value="none" />
+        <item name="Dark" value="dark" />
+        <item name="Divine" value="divine" />
+        <item name="Earth" value="earth" />
+        <item name="Fire" value="fire" />
+        <item name="Light" value="light" />
+        <item name="Water" value="water" />
+        <item name="Wind" value="wind" />
+        <item name="Dream" value="dream" />
+        <item name="Spell" value="spell" />
+        <item name="Trap" value="trap" />
+        <item name="Exclude" value="exclude" />
+    </data>
+    
+    
+    
+    
+    
+    
+        <data name="attribute" desc="Attribute/Grade" type="multi_select">
+        <item name="cardattr" value="cardattr" />
+        <item name="grade" value="grade" />
+        <item name="gradenum" value="gradenum" />
+        <item name="doublesided" value="doublesided" />
+    </data>
+    
+    
+    
+    
+    <data name="doublesided" default="none" desc="Double Sided Symbol">
+        <item name="None" value="none" />
+        <item name="Obverse" value="obverse" />
+        <item name="Reverse" value="reverse" />
+        <item name="Converse" value="converse" />
+    </data>
+    
+    
+    
+    
+    <data name="cardattr" default="light" desc="Attribute">
+        <item name="none" value="none" />
+        <item name="dark" value="dark" />
+        <item name="divine" value="divine" />
+        <item name="earth" value="earth" />
+        <item name="fire" value="fire" />
+        <item name="light" value="light" />
+        <item name="water" value="water" />
+        <item name="wind" value="wind" />
+        <item name="dream" value="dream" />
+        <item name="spell" value="spell" />
+        <item name="trap" value="trap" />
+    </data>
+    
+    <data name="grade" default="none" desc="Grades">
+        <item name="none" value="none" />
+        <item name="grade dark" value="dark" />
+        <item name="grade earth" value="earth" />
+        <item name="grade fire" value="fire" />
+        <item name="grade light" value="light" />
+        <item name="grade water" value="water" />
+        <item name="grade wind" value="wind" />
+        <item name="grade divine" value="divine" />
+        <item name="grade dream" value="dream" />
+    </data>
+    <data name="gradenum" default="" desc="Grade Number" type="text" />
+
+  
+   <data name="gateframe" desc="Gate" type="multi_select">
+        <item name="gate" value="gate" />
+        <item name="gatename" value="gatename" />
+        <item name="Rgate" value="Rgate" />
+        <item name="lgate" value="lgate" />
+     </data>
+     
+        <data name="lgate" default="fusion" desc="Left Gate">
+       <item name="None" value="" />
+        <item name="Normal" value="normal" />
+        <item name="Effect" value="effect" />
+        <item name="Ritual" value="ritual"/>
+        <item name="Fusion" value="fusion" />
+        <item name="Synchro" value="synchro" />
+        <item name="Xyz" value="xyz" />
+        <item name="Link" value="link" />
+        <item name="Xros" value="xros" />
+        <item name="Evolve" value="evolve" />
+        <item name="Evolute" value="evolute" />
+        <item name="Bigbang" value="bigbang" />
+        <item name="Timeleap" value="timeleap" />
+        <item name="Spatial" value="spatial" />
+        
+     </data>
+     <data name="Rgate" default="fusion" desc="Right Gate">
+        <item name="None" value="" />
+        <item name="Normal" value="normal" />
+        <item name="Effect" value="effect" />
+        <item name="Ritual" value="ritual"/>
+        <item name="Fusion" value="fusion" />
+        <item name="Synchro" value="synchro" />
+        <item name="Xyz" value="xyz" />
+        <item name="Link" value="link" />
+        <item name="Xros" value="xros" />
+        <item name="Evolve" value="evolve" />
+        <item name="Evolute" value="evolute" />
+        <item name="Bigbang" value="bigbang" />
+        <item name="Timeleap" value="timeleap" />
+        <item name="Spatial" value="spatial" />
+     </data>
+    <data name="gate" default="gate-0" desc="Gate Frame">
+        <item name="Off" value="none" />
+        <item name="On" value="gate-0" />
+     </data>
+    <data name="gatename" default="single" desc="Gate Name Plate">
+        <item name="Single" value="single" />
+        <item name="Dual" value="dual" />
+     </data>
+    
+    
+    
+    
+    <data name="cardtype" default="effect" desc="Card Type">
+        <item name="test2" value="test2" />
+        <item name="test" value="test" />
+        <item name="Normal" value="normal" />
+        <item name="Effect" value="effect" />
+        <item name="Ritual" value="ritual" />
+        <item name="Fusion" value="fusion" />
+        <item name="Synchro" value="synchro" />
+        <item name="Xyz" value="xyz" />
+        <item name="Link" value="link" />
+        <item name="Spell" value="spell" />
+        <item name="Trap" value="trap" />
+        <item name="Token" value="token" />
+        <item name="Osiris" value="osiris" />
+        <item name="Obelisk" value="obelisk" />
+        <item name="Ra" value="ra" />
+        <item name="Legendary Dragons" value="legendarydragon" />
+        <item name="Uria" value="uria" />
+        <item name="Raviel" value="raviel" />
+        <item name="Hamon" value="hamon" />
+        <item name="Dark synchro" value="dsynchro" />
+        <item name="Zarc" value="zarc" />
+        <item name="Xros" value="xros" />
+        <item name="Evolve" value="evolve" />
+        <item name="Switch" value="switch" />
+        <item name="Gemini" value="gemini" />
+        <item name="Seal" value="seal" />
+        <item name="Evolute" value="evolute" />
+        <item name="Bigbang" value="bigbang" />
+        <item name="Time Leap" value="timeleap" />
+        <item name="Origin Spatial" value="spatial" />
+        <item name="Altered Spatial" value="spatial2" />        
+    </data>
+    
+    
+    
+    
+    <data name="rdstyle" desc="Style: Rush Duel" type="multi_select">
+        <item name="rushlabel" value="rushlabel" />
+        <item name="rdmaximum" value="rdmaximum" />
+        <item name="rushlegend" value="rushlegend" />
+    </data>
+    
+    <data name="rdmaximum" default="Off" desc="Maximum Type">
+        <item name="Off" value="none" />
+        <item name="On" value="rdmaximum" />
+    </data>
+    
+    <data name="rushlabel" default="rushlabel" desc="'RUSH DUEL' tag">
+        <item name="Off" value="none" />
+        <item name="On" value="rushlabel" />
+    </data>
+    
+    <data name="rushlegend" default="off" desc="LEGEND tag">
+
+        <item name="Off" value="none" />
+
+        <item name="Gold" value="rushlegendgold" />
+        <item name="Silver" value="rushlegendsilver" />
+    </data>
+
+     
+    <data name="rdlinkmarkers" default="Off" desc="Link Markers" type="multi_select">
+        <item name="rdlink-1" value="rdlink-1" />
+        <item name="rdlink-2" value="rdlink-2" />
+        <item name="rdlink-3" value="rdlink-3" />
+        <item name="rdlink-4" value="rdlink-4" />
+        <item name="rdlink-5" value="rdlink-5" />
+        <item name="rdlink-6" value="rdlink-6" />
+        <item name="rdlink-7" value="rdlink-7" />
+        <item name="rdlink-8" value="rdlink-8" />
+    </data>
+    
+    <data name="rdlink-1" default="off" desc="Top">
+        <item name="arrows off" value="" />
+        <item name="arrows on" value="rdlink-1" />
+     </data>
+     <data name="rdlink-2" default="off" desc="Top Right">
+        <item name="arrows off" value="" />
+        <item name="arrows on" value="rdlink-2" />
+     </data>
+     <data name="rdlink-3" default="off" desc="Right">
+        <item name="arrows off" value="" />
+        <item name="arrows on" value="rdlink-3" />
+     </data>
+     <data name="rdlink-4" default="off" desc="Bottom Right">
+        <item name="arrows off" value="" />
+        <item name="arrows on" value="rdlink-4" />
+     </data>
+        <data name="rdlink-5" default="off" desc="Bottom">
+        <item name="arrows off" value="" />
+        <item name="arrows on" value="rdlink-5" />
+     </data>
+        <data name="rdlink-6" default="off" desc="Bottom Left">
+        <item name="arrows off" value="" />
+        <item name="arrows on" value="rdlink-6" />
+     </data>
+        <data name="rdlink-7" default="off" desc="Left">
+        <item name="arrows off" value="" />
+        <item name="arrows on" value="rdlink-7" />
+     </data>
+        <data name="rdlink-8" default="off" desc="Top Left">
+        <item name="arrows off" value="" />
+        <item name="arrows on" value="rdlink-8" />
+     </data>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <data name="cardname" default="Card Name" desc="Card Name" type="text" />
+    <data name="cardcode" default="" desc="Card Code" type="text" />
+    <data name="cardtext" default="Input Monster Effect" desc="Text" type="text" />
+    <data name="cardptext" default="Input Pendulum Effect" desc="Pendulum Text" type="text" />
+    <data name="xrostext" default="Input Xros Effect" desc="Xros Effect" type="text" />
+    <data name="gatetext" default="Level 7" desc="Gate Name" type="text" />
+    <data name="rdmaxatk" default="0" desc="Maximum ATK" type="text" />
+    <data name="cardpleft" default="0" desc="Pendulum Left" type="text" />
+    <data name="cardpright" default="0" desc="Pendulum Right" type="text" />
+    <data name="edition" default="" desc="Edition" type="text" />
+    <data name="edition2" default="" desc="Edition" type="text" />
+    <data name="cardnum" default="" desc="Number" type="text" />
+    <data name="cardcopy" default="   ©2020 Studio Dice/SHUEISHA, TV TOKYO, KONAMI" desc="copyright" type="text" />
+    <data name="cardcode_image" default="{{cardcode}}.png" desc="Image" type="image" />
+
+    <data name="pimagetype" default="" desc="Pendulum Artwork Style">
+        <item name="Default" value="" />
+        <item name="Rectangle" value="rect" />
+        <item name="Full" value="full" />
+    </data>
+    
+    
+    
+    <data name="cardborder" default="" desc="border color">
+        <item name="default" value="" />
+        <item name="gold" value="gold" />
+    </data>
+    <data name="namecolor" default="" desc="card name color">
+        <item name="default" value="" />
+        <item name="silvery" value="#E6E6E6" />
+        <item name="gold" value="#FFD700" />
+        <item name="red" value="#3C0000" />
+        <item name="white" value="#ffffff" />
+        <item name="black" value="#000000" />
+    </data>
+
+
+    <data name="cardrare" default="none" desc="rare type">
+        <item name="default" value="none" />
+        <item name="super foil" value="superfoil" />
+        <item name="ultra foil" value="ultra" />
+        <item name="ultra foil 2" value="ultrafoil" />
+        <item name="secret foil" value="secretfoil" />
+        <item name="secret foil 2" value="secretfoil2" />
+        <item name="parallel foil" value="parallelfoil" />
+        <item name="mosaic foil" value="mosaicfoil" />
+        <item name="star foil" value="starfoil" />
+        <item name="ultimate foil" value="ultimatefoil" />
+        <item name="ultimate foil 2" value="ultimatefoil2" />
+        <item name="foil" value="foil" />
+        <item name="foil 2" value="foil2" />
+        <item name="ghost foil" value="ghostfoil" />
+        <item name="ghost foil 2" value="ghostfoil2" />
+        <item name="ghost foil 3" value="ghostfoil3" />
+        <item name="ghost foil 4" value="ghostfoil4" />
+        <item name="egyptian foil" value="egyptian" />
+        <item name="kaiba foil" value="kaibararefoil" />
+        <item name="lemon foil" value="lemonfoil" />
+        <item name="apple foil" value="applefoil" />
+    </data>
+
+    <data name="rare_type" default="" desc="rare size">
+        <item name="default" value="" />
+        <item name="middle" value="middle" />
+        <item name="full" value="full" />
+    </data>
+
+    <data name="corner" default="none" desc="corner">
+        <item name="default" value="none" />
+        <item name="cornerdefault" value="cornerdefault" />
+        <item name="cornerfirst" value="cornerfirst" />
+        <item name="cornerunlimited" value="cornerunlimited" />
+    </data>
+
+    <data name="pendulum" default="none" desc="pendulum type">
+        <item name="none" value="none" />
+        <item name="big" value="big" />
+        <item name="normal" value="normal" />
+        <item name="small" value="small" />
+        <item name="pande normal" value="pandemed" />
+        <item name="pande big" value="pandeb" />
+        <item name="pande small" value="pandes" />
+        <item name="relay"  value= 'relay' />
+    </data>
+
+    <data name="extended" default="none" desc="extended art type">
+        <item name="none" value="none" />
+        <item name="full" value="white" />
+        <item name="semi" value="white50" />
+        <item name="non-transparent" value="full" />
+    </data>
+    
+    <data name="condense" default="0.7" desc="Effect Text Condense">
+        <item name="off (shrink font only)" value="1" />
+        <item name="low (85%)" value="0.85" />
+        <item name="normal (70%)" value="0.7" />
+        <item name="high (60%)" value="0.6" />
+        <item name="max (50%)" value="0.5" />
+    </data>
+
+    <data name="cardstyles" default="series 10" desc="Card Template Styles">
+        <item name="Series 10" value="none"  />
+        <item name="Rush Duel" value="rushduel" />
+        </data>
+
+    <data name="stmark" default="" desc="spell/trap">
+        <item name="none" value="" />
+        <item name="normal spell" value="normalspell" />
+        <item name="normal trap" value="normaltrap" />
+        <item name="quick spell" value="quickspell" />
+        <item name="ritual spell" value="ritualspell" />
+        <item name="continuous spell" value="continuousspell" />
+        <item name="equip spell" value="equipspell" />
+        <item name="field spell" value="fieldspell" />
+        <item name="counter trap" value="countertrap" />
+        <item name="continuous trap" value="continuoustrap" />
+    </data>
+    
+    <data name="rdstmark" default="" desc="spell/trap">
+        <item name="none" value="" />
+        <item name="normal spell" value="rd_normalspell" />
+        <item name="normal trap" value="rd_normaltrap" />
+        <item name="quick spell" value="rd_quickspell" />
+        <item name="ritual spell" value="rd_ritualspell" />
+        <item name="continuous spell" value="rd_continousspell" />
+        <item name="equip spell" value="rd_equipspell" />
+        <item name="field spell" value="rd_fieldspell" />
+        <item name="counter trap" value="rd_countertrap" />
+        <item name="rd_continuous trap" value="rd_continoustrap" />
+    </data>
+
+    <data name="race" default="[/]" desc="Input types" type="text" />
+
+    <data name="cardmonster" desc="Typelines" type="multi_select">
+        <item name="Monster Type" value="Monster Type" />
+        <item name="race" value="race" />
+    </data>
+
+    <data name="cardfoil" desc="Foil" type="multi_select">
+        <item name="cardrare" value="cardrare" />
+        <item name="rare_type" value="rare_type" />
+        <item name="cardborder" value="cardborder" />
+        <item name="cardstyles" value="cardstyles" />
+        <item name="corner" value="corner" />
+        <item name="cardcopy" value="cardcopy" />
+    </data>
+    
+    <data name="atkdef" desc="ATK/DEF/LINK" type="multi_select">
+        <item name="atk" value="atk" />
+        <item name="def" value="def" />
+        <item name="atkvalue" value="atkvalue" />
+        <item name="defvalue" value="defvalue" />
+        <item name="lnk" value="lnk" />
+        <item name="atkdefline" value="atkdefline" />
+    </data>
+    <data name="atkvalue" default="0" desc="ATK Value" type="text" />
+    <data name="defvalue" default="0" desc="DEF Value" type="text" />
+    <data name="atkdefline" default="bar" desc="ATK/DEF line">
+        <item name="off" value="none" />
+        <item name="on" value="bar" />
+    </data>
+    <data name="atk" default="atk" desc="ATK letter">
+        <item name="none" value="none" />
+        <item name="ATK" value="atk" />
+    </data>
+        <data name="def" default="def" desc="DEF letter">
+        <item name="none" value="none" />
+        <item name="DEF" value="def" />
+    </data>
+      <data name="lnk" default="none" desc="LINK letter">
+        <item name="none" value="none" />
+        <item name="Link" value="lnk" />
+     </data>
+        
+    <data name="linkarrows1" desc="link arrow" type="multi_select">
+        <item name="link1" value="link1" />
+     </data>
+        
+     <data name="linkarrows2" desc="link arrow" type="multi_select">
+        <item name="link2" value="link2" />
+     </data>
+     <data name="linkarrows3" desc="link arrow" type="multi_select">
+        <item name="link3" value="link3" />
+     </data>
+     <data name="linkarrows4" desc="link arrow" type="multi_select">
+        <item name="link4" value="link4" />
+     </data>
+     <data name="linkarrows5" desc="link arrow" type="multi_select">
+        <item name="link5" value="link5" />
+     </data>
+     <data name="linkarrows6" desc="link arrow" type="multi_select">
+        <item name="link6" value="link6" />
+     </data>
+     <data name="linkarrows7" desc="link arrow" type="multi_select">
+        <item name="link7" value="link7" />
+     </data>
+     <data name="linkarrows8" desc="link arrow" type="multi_select">
+        <item name="link8" value="link8" />
+     </data>
+     
+    <data name="linkborder" default="off" desc="link border">
+        <item name="off" value="" />
+        <item name="on" value="link-0" />
+     </data>
+    <data name="link1" default="off" desc="arrow 1">
+        <item name="arrows off" value="" />
+        <item name="arrows on" value="link-1" />
+     </data>
+     <data name="link2" default="off" desc="arrow 2">
+        <item name="arrows off" value="" />
+        <item name="arrows on" value="link-2" />
+     </data>
+     <data name="link3" default="off" desc="arrow 3">
+        <item name="arrows off" value="" />
+        <item name="arrows on" value="link-3" />
+     </data>
+     <data name="link4" default="off" desc="arrow 4">
+        <item name="arrows off" value="" />
+        <item name="arrows on" value="link-4" />
+     </data>
+        <data name="link5" default="off" desc="arrow 5">
+        <item name="arrows off" value="" />
+        <item name="arrows on" value="link-5" />
+     </data>
+        <data name="link6" default="off" desc="arrow 6">
+        <item name="arrows off" value="" />
+        <item name="arrows on" value="link-6" />
+     </data>
+        <data name="link7" default="off" desc="arrow 7">
+        <item name="arrows off" value="" />
+        <item name="arrows on" value="link-7" />
+     </data>
+        <data name="link8" default="off" desc="arrow 8">
+        <item name="arrows off" value="" />
+        <item name="arrows on" value="link-8" />
+     </data>
+
+        <data name="levelvalue" desc="Level Values" type="multi_select">
+       <item name="cardlevel" value="cardlevel" />
+    </data>
+    
+        <data name="cardlevel" default="4" desc="Level/Rank" type="text" />
+    
+    
+    
+
+    <data name="cardbg" desc="Style settings" type="multi_select">
+        <item name="cardtype" value="cardtype" />
+        <item name="image_type" value="image_type" />
+        <item name="pendulum" value="pendulum" />
+        <item name="pimagetype" value="pimagetype" />
+        <item name="namecolor" value="namecolor" />
+        <item name="linkborder" value="linkborder" />
+        <item name="extended" value="extended" />
+    </data>
+    
+
+    <bool name="linkborderon" value="'{{linkborder}}' == 'link-0'" />
+    <bool name="cardborder_is_gold" value="'{{cardborder}}' == 'gold'" />
+    <bool name="is_pendulum" value="'{{pendulum}}' == 'big' or '{{pendulum}}' == 'normal' or '{{pendulum}}' == 'small' or '{{pendulum}}' == 'pandemed' or '{{pendulum}}' == 'pandeb' or '{{pendulum}}' == 'pandes'" />
+    
+    
+    <bool name="image_is_normal" value="'{{image_type}}' != 'noframe' and '{{image_type}}' != 'full'" />
+    <bool name="image_is_noframe" value="'{{image_type}}' == 'noframe'" />
+    <bool name="image_is_full" value="'{{image_type}}' == 'full'" />
+    <bool name="pimage_is_rect" value="'{{pimagetype}}' == 'rect'" />
+    <bool name="pimage_is_full" value="'{{pimagetype}}' == 'full'" />
+    
+    
+    
+    <bool name="pendulum_is_normal" value="'{{pendulum}}' == 'normal' or '{{pendulum}}' == 'pandemed'" />
+    <bool name="pendulum_is_big" value="'{{pendulum}}' == 'big' or '{{pendulum}}' == 'pandeb'" />
+    <bool name="pendulum_is_small" value="'{{pendulum}}' == 'small' or '{{pendulum}}' == 'pandes'" />
+    <bool name="pendulum_nots_big" value="{{pendulum_is_small}} or {{pendulum_is_normal}}" />
+    <bool name="pendulum_nots_small" value="{{pendulum_is_normal}} or {{pendulum_is_big}}" />
+    <bool name="is_spelltrap" value="'{{cardtype}}' == 'spell' or '{{cardtype}}' == 'trap' or '{{extended}}' == 'spellex' or '{{extended}}' == 'trapex'" />
+    <bool name="rare_type_is_normal" value="'{{rare_type}}' == ''" />
+    <bool name="rare_type_is_middle" value="'{{rare_type}}' == 'middle'" />
+    <bool name="rare_type_is_full" value="'{{rare_type}}' == 'full'" />
+    
+    
+    <bool name="card_is_black" value="'{{cardtype}}' == 'xyz' or '{{cardtype}}' == 'custom' or '{{cardtype}}' == 'xros' or '{{cardtype}}' == 'dsynchro' or '{{cardtype}}' == 'timeleap' or '{{cardtype}}' == 'evolute' or '{{cardtype}}' == 'bigbang' or '{{cardtype}}' == 'manaburst' or '{{cardtype}}' == 'evolve'" />
+    
+    <bool name="rush_black" value="'{{cardtype}}' == 'xyz' or '{{cardtype}}' == 'xros' or '{{cardtype}}' == 'dsynchro' or '{{cardtype}}' == 'timeleap' or '{{cardtype}}' == 'evolute' or '{{cardtype}}' == 'bigbang' or '{{cardtype}}' == 'manaburst' or '{{cardtype}}' == 'evolve'" />
+    
+    <bool name="card_is_ex" value="'{{extended}}' == 'normalex' or '{{extended}}' == 'effectex' or '{{extended}}' == 'ritualex' or '{{extended}}' == 'fusionex' or '{{extended}}' == 'synchroex' or '{{extended}}' == 'xyzex' or '{{extended}}' == 'pendulumex' or '{{extended}}' == 'linkex' or '{{extended}}' == 'evoltex' or '{{extended}}' == 'spellex' or '{{extended}}' == 'trapex' or '{{extended}}' == 'white' or '{{extended}}' == 'white70' or '{{extended}}' == 'white50' or '{{extended}}' == 'full'" />        
+ 
+     <bool name="is_rush" value="'{{cardstyles}}' == 'rushduel'" />
+ 
+     <bool name="is_xros" value="'{{cardtype}}' == 'xros'" />
+     
+     <bool name="rd_xros" value=" '{{cardtype}}' == 'xros' and {{is_rush}}" />
+     
+     <bool name="is_relay" value="'{{pendulum}}' == 'relay'" />
+     
+     <bool name="is_ds" value="'{{doublesided}}' == 'converse' or '{{doublesided}}' == 'obverse' or '{{doublesided}}' == 'reverse'" />   
+     
+     <bool name="is_extended_art" value="'{{cardtype}}' == 'xros' or {{is_pendulum}} or {{card_is_ex}}" />    
+ 
+    <bool name="card_name_is_white" value="{{is_spelltrap}} or {{card_is_black}} or {{cardtype}} == 'link' or {{rush_black}}" />
+    <bool name="has_name_color" value="'{{namecolor}}' != ''" />
+    <layout>
+        <size height="613" left="0" top="0" width="421" />
+        <image click="cardbg" index="-5">
+            <size height="613" left="0" top="0" width="421" />
+            <src>bg/card-{{cardtype}}.png</src>
+        </image>
+        
+   <!-- artwork frame -->
+        <image index="-5">
+            <size height="613" left="0" top="0" width="421" />
+            <src>artwork-default.png</src>
+            <visible>{{is_rush}} == false and {{is_pendulum}} == false and {{is_xros}} == false and {{card_is_ex}} == false</visible>
+        </image>
+        
+  <!-- box frame -->
+        <image index="-5">
+            <size height="613" left="0" top="0" width="421" />
+            <src when="{{cardtype}} == 'switch'">switchframe.png</src>
+            <src>boxframe.png</src>
+            <visible>{{is_rush}} == false and {{is_pendulum}} == false and {{is_xros}} == false and {{card_is_ex}} == false</visible>
+        </image>
+        
+        <!--Border-->
+        <image index="5">
+            <size height="614" left="-4" top="-2" width="426.5" />
+            <src>foil/border.png</src>
+            <visible>{{cardborder_is_gold}} and {{is_rush}} == false</visible>
+        </image>
+
+        <!-- artwork image-->
+        <image background="#000000" click="cardcode_image" index="-4">
+            
+           <size height="293" left="28.7" top="110" when="{{pendulum_is_small}} and {{pimage_is_rect}}" width="364.5" />
+           
+           <size height="295" left="28.7" top="88" when="{{is_xros}} and {{pimage_is_rect}}" width="364.5" />
+           
+            <size height="490" left="28.7" top="88" when="{{is_xros}} and {{pimage_is_full}}" width="364.5" />
+            
+            <size height="472" left="24" top="107" when="{{pimage_is_full}}" width="373" />
+           
+           <size height="272" left="28.7" top="110" when="{{pimage_is_rect}}" width="364.5" />
+            
+           <size height="377" left="20" top="62" when="{{is_rush}} and {{is_xros}}" width="380" />
+            
+           <size height="377" left="20" top="62" when="{{is_rush}} and {{is_pendulum}}" width="380" />
+            
+            <size height="365" left="28.7" top="87" when="{{is_xros}}" width="364.5" />
+            
+           <size height="358" left="28.7" top="110" when="{{pendulum_is_big}}" width="364.5" />
+           
+            
+           <size height="345" left="28.7" top="110" when="{{is_pendulum}}" width="364.5" />
+            
+            <size height="331.5" left="45.5" top="106.5" when="{{image_is_noframe}}" width="331.5" />
+            
+            <size height="587" left="10" top="12.5" when="{{image_is_full}}" width="400" />
+            
+            <size height="345" left="28.5" top="110" when="{{extended}} == 'full'" width="364.5" />
+            
+            <size height="472" left="24" top="107" when="{{card_is_ex}}" width="373" />
+            
+            <size height="380" left="22" top="61" when="{{is_rush}}" width="376" />
+            
+            <size height="319" left="51.5" top="113" width="319" />
+            <src>{{cardcode_image}}</src>
+        </image>
+        
+        <!-- Rare Foil-->
+        <image index="1">
+            <size height="613" left="0" top="0" when="{{rare_type_is_full}}" width="421" />
+            <size height="587" left="10" top="12" when="{{image_is_full}}" width="400" />
+            <size height="300" left="24" top="87" when="{{is_xros}}" width="372" />
+            <size height="345" left="30" top="110" when="{{card_is_ex}}" width="363" />
+            <size height="271.5" left="30" top="110" when="{{pendulum_nots_small}}" width="363" />
+            <size height="295" left="24" top="108" when="{{pendulum_is_small}}" width="372" />
+            
+            <size height="332" left="45" top="106" when="{{image_is_noframe}}" width="332" />
+            
+            <size height="319.7" left="51.5" top="113" width="319.7" />
+            <src>foil/{{cardrare}}.png</src>
+            <visible>{{rare_type_is_normal}} == false and {{is_rush}} == false</visible>
+        </image>
+        
+        
+        
+        <!-- name（transparent） -->
+        <image index="1">
+            <size height="50" left="17" top="22" width="386" />
+            <src>name.png</src>
+            <visible>{{image_is_full}}</visible>
+        </image>
+        
+        <!-- pend background（transparent） -->
+        <image index="-5">
+            <size height="613" left="0" top="0" width="421" />
+            <src>blankbg.png</src>
+            <visible>{{is_pendulum}} and {{pimage_is_rect}}</visible>
+        </image>
+        
+        
+        
+        <!-- text border（transparent） -->
+        <image index="1">
+            <size height="128" left="22" top="454" width="377" />
+            <src>desc.png</src>
+            <visible>{{image_is_full}}</visible>
+        </image>
+        <!-- BAR -->
+        <image index="2">
+            <size height="613" left="0" top="-71" when="{{is_rush}} and {{rd_xros}}" width="421" />
+            <size height="613" left="0" top="-54" when="{{is_rush}} and {{pendulum_is_small}}" width="421" />
+            <size height="613" left="0" top="-104" when="{{is_rush}} and {{pendulum_is_big}}" width="421" />
+            <size height="613" left="0" top="-71" when="{{is_rush}} and {{pendulum_is_normal}}" width="421" />
+            <size height="613" left="0" top="0" when="{{is_rush}}" width="421" />
+            <size height="1.5" left="33" top="557" width="355" />
+            <src when="{{is_rush}}">rd-{{atkdefline}}.png</src>
+            <src>{{atkdefline}}.png</src>
+            <visible>{{is_spelltrap}} == false</visible>
+        </image>
+        <!-- GOLD BORDER MIDDLE -->
+        <image index="5">
+            <size height="332" left="42" top="104" width="337" />
+            <src>foil/image.png</src>
+            <visible>{{is_pendulum}} == false and {{cardborder_is_gold}} and {{image_is_normal}} and {{is_rush}} == false</visible>
+        </image>
+        <!-- PENDULUM BORDER -->
+        <image index="1">
+            <size height="613" left="0" top="0" when="{{is_rush}}" width="421" />
+            <size height="613" left="0" top="0" width="421" />
+            <src when="{{is_rush}}">pendulum/rdpendulum_{{pendulum}}.png</src>
+            <src>pendulum/pendulum_{{pendulum}}.png</src>
+            <visible>{{is_pendulum}}</visible>
+        </image>
+        
+        <!-- RELAY BORDER -->
+        <image index="1">
+            <size height="613" left="0" top="0" width="421" />
+            <src>pendulum/pendulum_relay.png</src>
+            <visible>{{is_relay}} and {{is_rush}} == false</visible>
+        </image>
+        <image index="1">
+            <size height="613" left="0" top="0" width="421" />
+            <src>pendulum/rdpendulum_relay.png</src>
+            <visible>{{is_rush}} and {{is_relay}}</visible>
+        </image>
+        
+        
+        
+        
+        
+        
+        <!-- P怪边框（金边） 镀膜 -->
+        <image index="1">
+            <size height="480" left="22" top="103" width="378" />
+            <src>foil/pend_{{pendulum}}.png</src>
+            <visible>{{is_pendulum}} and {{cardborder_is_gold}}</visible>
+        </image>
+        
+        
+        <!-- CARD NAME -->
+        <text click="cardname" index="2" singleline="true">
+            <size height="40" left="61" top="17" when="{{is_rush}} and {{is_ds}}" width="280" />
+            <size height="40" left="71" top="27" when="{{is_ds}}" width="280" />
+            <size height="40" left="20" top="22" when="{{is_rush}}" width="315" />
+            <size height="40" left="32" top="33" width="313" />
+            <align>left</align>
+            <color when="{{has_name_color}}">{{namecolor}}</color>
+            <color when="{{card_name_is_white}}">#ffffff</color>
+            <color>#000000</color>
+            <font name="font/MatrixRegularSmallCapsMod.otf" style="normal" size="49" />
+            <text>{{cardname}}</text>
+        </text>
+
+        <!-- LEVEL --> 
+        <image index="5" scaleType="FIT_CENTER">
+            <size height="71" left="17" top="313" when="{{is_rush}} and {{pendulum_is_small}}" width="80" />
+
+            <size height="71" left="17" top="263" when="{{is_rush}} and {{pendulum_is_big}}" width="80" />
+            <size height="71" left="17" top="296" when="{{is_rush}} and {{pendulum_is_normal}}" width="80" />
+            <size height="71" left="17" top="368" when="{{is_rush}}" width="80" />
+            <size height="55" left="165" top="85" when="{{cardtype}} == 'manaburst'" width="421" />
+            <size height="27" left="0" top="74" when="{{cardtype}} == 'timeleap'" width="421" />
+            <size height="27" left="0" top="74" when="{{cardtype}} == 'spatial'" width="421" />
+            <size height="27" left="0" top="74" when="{{cardtype}} == 'spatial2'" width="421" />
+            
+        <size height="613" left="0" top="0" width="421" />
+            
+            
+            <src when="{{is_rush}} and {{cardtype}} == 'xyz'">rank/rdrank-{{cardlevel}}.png</src>
+            <src when="{{is_rush}} and {{cardtype}} == 'timeleap'">future/rdfuture-{{cardlevel}}.png</src>
+            <src when="{{is_rush}} and {{cardtype}} == 'spatial'">spatial/rdorigin-{{cardlevel}}.png</src>
+            <src when="{{is_rush}} and {{cardtype}} == 'spatial2'">spatial/rdaltered-{{cardlevel}}.png</src>
+            
+            <src when="{{cardtype}} == 'xyz'">rank/rank-{{cardlevel}}.png</src>
+            <src when="{{cardtype}} == 'dsynchro'">nlevel/nlevel-{{cardlevel}}.png</src>
+            <src when="{{cardtype}} == 'timeleap'">future/future-{{cardlevel}}.png</src>
+            <src when="{{cardtype}} == 'spatial'">spatial/origindimension-{{cardlevel}}.png</src>
+            <src when="{{cardtype}} == 'spatial2'">spatial/altereddimension-{{cardlevel}}.png</src>            
+            <src when="{{cardtype}} == 'manaburst'">mana/mana-{{cardlevel}}.png</src>
+            <src when="{{is_rush}}">level/rdlevel-{{cardlevel}}.png</src>
+            <src>level/level-{{cardlevel}}.png</src>
+            <visible>{{linkborderon}} == false and {{is_spelltrap}} == false and {{is_xros}} == false</visible>
+        </image>
+
+        <!-- Spell Trap Mark -->
+        <image click="stmark" index="2" scaleType="FIT_CENTER">
+            <size height="26" left="209" top="76" width="168" />
+            <src>enmark/{{stmark}}.png</src>
+            <visible>{{is_spelltrap}}</visible>
+        </image>
+
+        <!-- Rush Spell Trap Mark -->
+        <image click="rdstmark" index="2" scaleType="FIT_CENTER">
+        <size height="30" left="10" top="450" width="400" />
+        <visible>{{is_rush}}</visible>
+        </image> 
+    
+
+        <image index="2">
+            <size height="613" left="0" top="0" width="421" />
+            <src>enmark/{{rdstmark}}.png</src>
+            <visible>{{is_rush}} and {{is_spelltrap}}</visible>
+        </image>
+        
+        <!-- Race/Type text -->
+        <text click="cardmonster" index="20" singleline="true" >
+            <size height="30" left="29" top="436" when="{{is_rush}}" width="313" />
+            <size height="30" left="33" top="468" when="{{pendulum_is_big}}" width="361" />
+            <size height="30" left="33" top="453" width="361" />
+            <align>left|center</align>
+            <color when="{{is_rush}} and {{rush_black}} and {{is_pendulum}} == false and {{is_relay}} == false">#ffffff</color>
+            <color>#000000</color>
+            <font name="font/ITCSerifSmallCapsBoldMod.ttf" style="normal" size="17" when="{{is_rush}}" />
+            <font name="font/ITCSerifSmallCapsBoldMod.otf" style="normal" size="17" />
+            <text>{{race}}</text>
+            <visible>{{is_spelltrap}} == false</visible>
+        </text>
+        <!-- ATK value -->
+        <text click="atkdef" index="3">
+            <size height="30" left="146" top="338" when="{{is_rush}} and {{rd_xros}}" width="70" />
+            <size height="30" left="146" top="355" when="{{is_rush}} and {{pendulum_is_small}}" width="70" />
+            <size height="30" left="146" top="305" when="{{is_rush}} and {{pendulum_is_big}}" width="70" />
+<size height="30" left="146" top="338" when="{{is_rush}} and {{pendulum_is_normal}}" width="70" />
+<size height="30" left="146" top="409" when="{{is_rush}}" width="70" />
+<size height="18" left="251" top="559" width="50" />
+<align>right|center</align>
+            <color when="{{is_rush}}">#ffffff</color>
+            <color>#000000</color>
+            <font name="font/RO rush.otf" style="bold" size="20"
+                when="{{is_rush}}" />
+            <font name="font/MatrixBold.otf" style="normal" size="18" when="{{atkvalue}} == '?'"/>
+            <font name="font/MatrixBoldSmallCaps.otf" style="normal" size="18.5"/> 
+            <text>{{atkvalue}}</text>
+            <visible>{{is_spelltrap}} == false</visible>
+        </text>
+        <!-- ATK Label -->
+            <image index="2" scaleType="FIT_CENTER">
+            <size height="613" left="0" top="-70" when="{{is_rush}} and {{rd_xros}}" width="421" />
+            <size height="613" left="0" top="-54" when="{{is_rush}} and {{pendulum_is_small}}" width="421" />
+            <size height="613" left="0" top="-104" when="{{is_rush}} and {{pendulum_is_big}}" width="421" />
+            <size height="613" left="0" top="-72" when="{{is_rush}} and {{pendulum_is_normal}}" width="421" />
+            <size height="613" left="0" top="0" when="{{is_rush}}" width="421" />
+            <size height="615" left="-3" top="-2" width="426.5" />
+            <src when="{{is_rush}}">rd-{{atk}}.png</src>
+            <src>{{atk}}.png</src>
+            <visible>{{ATK}} == ATK and {{is_spelltrap}} == false</visible>
+        </image>
+        <!-- DEF value -->
+        <text click="atkdef" index="3">
+            <size height="30" left="276" top="338" when="{{is_rush}} and {{rd_xros}}" width="70" />
+            <size height="30" left="276" top="355" when="{{is_rush}} and {{pendulum_is_small}}" width="70" />
+            <size height="30" left="276" top="305" when="{{is_rush}} and {{pendulum_is_big}}" width="70" />
+            <size height="30" left="276" top="338" when="{{is_rush}} and {{pendulum_is_normal}}" width="70" />
+            <size height="30" left="276" top="409" when="{{is_rush}}" width="70" />
+            <size height="18" left="337" top="559" width="50" />
+            <align>right|center</align>
+            <color when="{{is_rush}}">#ffffff</color>
+            <color>#000000</color>
+            <font name="font/RO rush.otf" style="bold" size="20"
+                when="{{is_rush}}" />
+            <font name="font/MatrixBold.otf" style="normal" size="18" when="{{defvalue}} == '?'"/>
+            <font name="font/LINK.ttf" style="normal" size="19" when="{{lnk}} == 'lnk'"/>
+            <font name="font/MatrixBoldSmallCaps.otf" style="normal" size="18.5"/>
+            <text>{{defvalue}}</text>
+            <visible>{{is_spelltrap}} == false</visible>
+        </text>
+        <!-- DEF Label -->
+        <image index="2" scaleType="FIT_CENTER">
+            <size height="613" left="0" top="-70" when="{{is_rush}} and {{rd_xros}}" width="421" />
+            <size height="613" left="0" top="-54" when="{{is_rush}} and {{pendulum_is_small}}" width="421" />
+            <size height="613" left="0" top="-104" when="{{is_rush}} and {{pendulum_is_big}}" width="421" />
+            <size height="613" left="0" top="-72" when="{{is_rush}} and {{pendulum_is_normal}}" width="421" />
+            <size height="613" left="0" top="0" when="{{is_rush}}" width="421" />
+            <size height="615" left="-3" top="-2" width="426.5" />
+            <src when="{{is_rush}}">rd-{{def}}.png</src>
+            <src>{{def}}.png</src>
+            <visible>{{DEF}} == DEF and {{is_spelltrap}} == false</visible>
+        </image>
+        <!-- Link Label -->
+            <image index="5" scaleType="FIT_CENTER">
+            <size height="613" left="0" top="-71" when="{{is_rush}} and {{rd_xros}}" width="421" />
+            <size height="613" left="0" top="-54" when="{{is_rush}} and {{pendulum_is_small}}" width="421" />
+            <size height="613" left="0" top="-104" when="{{is_rush}} and {{pendulum_is_big}}" width="421" />
+            <size height="613" left="0" top="-71" when="{{is_rush}} and {{pendulum_is_normal}}" width="421" />
+            <size height="613" left="0" top="0" when="{{is_rush}}" width="421" />
+            <size height="100" left="300" top="517.7" width="82" />
+            <src when="{{is_rush}}">rd-{{lnk}}.png</src>
+            <src>{{lnk}}.png</src>
+            <visible>{{DEF}} == LINK and {{is_spelltrap}} == false</visible>
+        </image>
+        
+        <!-- Pendulum Scale Left -->
+        <text click="cardpleft" index="3">
+            
+            <size height="35" left="40" top="416" when="{{is_rush}}" width="35" />
+            
+            <size height="35" left="26" top="427" when="{{pendulum_is_big}}" width="35" />
+            
+            <size height="35" left="26" top="424" when="{{pendulum_is_small}}" width="35" />
+            
+            <size height="35" left="26" top="415" width="35" />
+            <align>center</align>
+            <color when="{{is_rush}}">#ffffff</color>
+            <color>#000000</color>
+            <font name="font/RO rush.otf" style="bold" size="12"
+                when="{{is_rush}}" />
+            <font name="font/MatrixBoldSmallCaps.otf" style="normal" size="27" />
+            <text>{{cardpleft}}</text>
+            <visible>{{is_pendulum}}</visible>
+        </text>
+        <!-- Pendulum Scale Right -->
+        <text click="cardpright" index="2">
+            
+            <size height="35" left="340" top="416" when="{{is_rush}}" width="35" />
+            
+            <size height="36" left="362" top="427" when="{{pendulum_is_big}}" width="30" />
+            
+            <size height="36" left="362" top="424" when="{{pendulum_is_small}}" width="30" />
+            
+            <size height="36" left="362" top="415" width="30" />
+            <align>center</align>
+            <color when="{{is_rush}}">#ffffff</color>
+            <color>#000000</color>
+            
+            <font name="font/RO rush.otf" style="bold" size="12"
+                when="{{is_rush}}" />
+                
+            <font name="font/MatrixBoldSmallCaps.otf" style="normal" size="27" />
+            <text>{{cardpright}}</text>
+            <visible>{{is_pendulum}}</visible>
+        </text>
+        <!-- CARD CODE -->
+        <text click="cardcode" index="2" singleline="true">
+            <size height="30" left="20" top="575" width="100" />
+            <align>left|vcenter</align>
+            <color when="{{is_pendulum}}">#000000</color>
+            <color when="{{card_is_black}}">#ffffff</color>
+            <color>#000000</color>
+            <font name="font/ITCStoneSerif.ttf" style="normal" size="12" />
+            <text>{{cardcode}}</text>
+        </text>
+        <!-- CARDCOPY -->
+        <text click="cardcopy" index="2" singleline="true">
+            <size height="17" left="24" top="575" when="{{is_rush}}" width="135" />
+            <size height="18" left="178" top="581.7" width="202" />
+            <align when="{{is_rush}}">left|center</align>
+            <align>right|center</align>
+            <color when="{{is_rush}}">#ffffff</color>
+            <color when="{{is_pendulum}}">#000000</color>
+            <color when="{{card_is_black}}">#ffffff</color>
+            <color>#000000</color>
+            <font name="font/ITCStoneSerifLT.ttf" style="normal" size="10" when="{{is_rush}}" />
+            <font name="font/ITC Stone Serif Regular.otf" style="bold" size="11.5" />
+            <text>{{cardcopy}}</text>
+        </text>
+        <!-- Pendulum text -->67 383 290
+        <text click="cardptext" index="5" keepWord="true" line-space-scale="1" singleline="false">
+            <size height="29.5" left="30" top="390" when="{{is_rush}} and {{pendulum_is_small}}" width="360" />
+            <size height="80" left="30" top="339" when="{{is_rush}} and {{pendulum_is_big}}" width="360" />
+            <size height="47" left="30" top="373" when="{{is_rush}} and {{pendulum_is_normal}}" width="360" />
+            <size height="47" left="30" top="373" when="{{is_rush}}" width="360" />
+            
+            <size height="45" left="68" top="406" when="{{pendulum_is_small}}" width="285" />
+            
+            <size height="79" left="68" top="386" when="{{pendulum_is_big}}" width="285" />
+            
+            <size height="60" left="68" top="386" width="285" />
+            <align>left</align>
+            <color>#000000</color>
+            <font name="font/MatrixBook.ttf" style="bold" size="12" />
+            <text>{{cardptext}}</text>
+            <visible>{{is_pendulum}}</visible>
+        </text> 80 475 30
+        
+        
+        <!-- EFFECT TEXT--> 
+        <text click="cardtext" index="2" keepWord="true" line-space-scale="1.0" singleline="false">
+            <size height="101.5" left="30" top="465" when="{{is_rush}}" width="359" />
+            <size height="60" left="35" top="492" when="{{pendulum_is_big}}" width="353" />
+            <size height="110" left="35" top="461" when="{{is_spelltrap}}" width="353" />
+            <size height="81.4" left="35" top="475.5" width="353" />
+            <align>left</align>
+            <color>#000000</color>
+            <font name="font/MatrixBook.ttf" style="bold" size="13" when="{{is_rush}}" />
+            <font name="font/MatrixBook.ttf" style="bold" size="12" when="{{is_spelltrap}}" />
+            <font name="font/Stone Serif Italic.ttf" style="" size="12"
+                when="'{{cardtype}}'=='normal'" />
+            <font name="font/MatrixBook.ttf" style="bold" size="12" />
+            <condense>{{condense}}</condense>
+            <text>{{cardtext}}</text>
+        </text>
+        <!-- CARD NUMBER/SET CODE-->
+        <text click="cardnum" index="2" singleline="true">
+            <size height="16" left="242" top="576" when="{{is_rush}}" width="140" />
+            <size height="16" left="36" top="559" when="{{is_extended_art}}" width="140" />
+            <size height="16" left="237" top="438" width="141" />
+            <align when="{{is_rush}} and {{is_pendulum}}">right|vcenter</align>
+            <align when="{{is_pendulum}}">vcenter</align>
+            <align when="{{is_extended_art}}">vcenter</align>
+            <align>right|vcenter</align>
+            <color when="{{is_rush}}">#ffffff</color>
+            <color when="{{is_pendulum}}">#000000</color>
+            <color when="{{is_xros}}">#000000</color>
+            <color when="{{card_is_black}}">#ffffff</color>
+            <color>#000000</color>
+            <font name="font/ITCStoneSerif.ttf" style="normal" size="10" when="{{is_rush}}" />
+            <font name="font/StoneSerif-Semibold.otf" style="normal" size="12" />
+            <text>{{cardnum}}</text>
+        </text>
+        
+        <!-- edition -->
+        <text click="edition" index="2" singleline="true">
+            <size height="30" left="80" top="575" width="115" />
+            <align>left|vcenter</align>
+            <color when="{{is_pendulum}}">#000000</color>
+            <color when="{{card_is_black}}">#ffffff</color>
+            <color>#000000</color>
+            <visible>{{is_rush}} == false</visible>
+            <font name="font/StoneSerif-Semibold.otf" style="normal" size="13" />
+            <text>{{edition}}</text>
+        </text>
+        
+     <text click="edition2" index="2" singleline="true">
+            <size height="20" left="45" top="436" width="115" />
+            <align>left|vcenter</align>
+            <color when="{{is_pendulum}}">#000000</color>
+            <color when="{{card_is_black}}">#ffffff</color>
+            <color>#000000</color>
+            <visible>{{card_is_ex}} == false and {{is_rush}} == false</visible>
+            <font name="font/StoneSerif-Semibold.otf" style="normal" size="13" />
+            <text>{{edition2}}</text>
+        </text>
+        <!-- FOIL -->
+        <image click="cardfoil" index="5">
+            <size height="21" left="387" top="575" when="{{is_rush}}" width="21" />
+            <size height="20" left="386" top="578" width="20" />
+            <src>{{corner}}.png</src>
+        </image>
+        
+     <!-- GRADE/ATTRIBUTE -->
+        <image click="attribute" index="2">
+            <size height="68" left="338" top="15" when="{{is_rush}}" width="68" />
+            <size height="39" left="352" top="29" width="39" />
+<src when="'{{cardtype}}' == 'spell' and {{is_rush}}">attribute/spell_rd.png</src>
+<src when="'{{cardtype}}' == 'spell'">attribute/spell_en.png</src>
+<src when="'{{cardtype}}' == 'trap' and {{is_rush}}">attribute/trap_rd.png</src>
+            <src when="'{{cardtype}}' == 'trap'">attribute/trap_en.png</src>
+            <src when="{{is_rush}}">attribute/{{cardattr}}_rd.png</src>
+            <src>attribute/{{cardattr}}_en.png</src>
+            </image>
+            
+    <!-- GRADE SYMBOL -->
+<image index="8">
+            <size height="70" left="337" top="13" when="{{is_rush}}" width="70" />
+            <size height="55" left="344" top="22" width="55" />
+            <src when="'{{cardtype}}' == 'xros'">grade/grade-{{grade}}.png</src>
+            <src>grade/exgrade-{{grade}}.png</src>
+        </image>
+    <!-- DOUBLE SIDED -->
+        <image index="8">
+            <size height="50" left="15" top="12" when="{{is_rush}}" width="50" />
+            <size height="47" left="26" top="25" width="47" />
+            <src>doublesided/dd_{{doublesided}}.png</src>
+        </image>
+    <!-- GRADE NUMBER -->
+        <text click="attribute" index="9" singleline="true">
+            <size height="46" left="351" top="22" when="{{is_rush}}" width="48" />
+            <size height="36" left="355" top="29" width="38" />
+            <align>center</align>
+            <color>#ffffff</color>
+            <font name="font/grades.ttf" style="normal" size="25" when="{{is_rush}}" />
+            <font name="font/grades.ttf" style="normal" size="20" />
+            
+            <text>{{gradenum}}</text>
+        </text>
+    <!-- XROS GATE -->
+    <image index="1">
+            <size height="613" left="0" top="0" width="421" />
+            <src>gate/{{gate}}.png</src>
+            <visible>{{is_xros}} and {{is_rush}} == false</visible>
+        </image>
+        
+[•]======[•]
+    <image index="8">
+            <size height="610" left="0" top="0" width="421" />
+            <src>gate/rd{{gate}}.png</src>
+            <visible>{{rd_xros}} and {{is_rush}}</visible>
+        </image>
+        
+        
+        
+        
+        <!-- Gate Name -->
+        <text click="gatetext" index="5" singleline="true" >
+            <size height="35" left="-91.2" top="364" width="600" />
+            <align>center</align>
+            <color>#000000</color>
+            <font name="font/MatrixBoldSmallCaps.otf" style="normal" size="14" />
+            <text>{{gatetext}}</text>
+            <visible>{{is_xros}} and {{is_rush}} == false</visible>
+        </text>
+        
+        [•]======[•]
+        <text click="gatetext" index="11" singleline="true" >
+            <size height="30" left="-91.2" top="416" width="600" />
+            <align>center</align>
+            <color>#ffffff</color>
+            <font name="font/RO rush.otf" style="normal" size="10" />
+            <text>{{gatetext}}</text>
+            <visible>{{rd_xros}} and {{is_rush}}</visible>
+        </text>
+
+        
+<!-- Xros text -->
+        <text click="xrostext" index="3" keepWord="true" line-space-scale="1" singleline="false" >
+            <size height="47" left="30" top="373" when="{{cardtype}} == xros and {{is_rush}}" width="360" />
+            <size height="46" left="65" top="410" when="{{xros_small}}" width="290" />
+            <size height="78" left="65" top="385" when="{{xros_big}}" width="290" />
+            <size height="61.9" left="38" top="388" width="345" />
+            <align>left</align>
+            <color>#ffffff</color>
+            <font name="font/MatrixBook.ttf" style="bold" size="12" />
+            <text>{{xrostext}}</text>
+            <visible>{{is_xros}} and {{is_rush}} == false</visible>
+        </text>
+        
+        [•]======[•]
+        <text click="xrostext" index="1" keepWord="true" line-space-scale="1" singleline="false" >
+            <size height="47" left="30" top="373" when="{{cardtype}} == xros and {{is_rush}}" width="360" />
+            <size height="46" left="65" top="410" when="{{xros_small}}" width="290" />
+            <size height="78" left="65" top="385" when="{{xros_big}}" width="290" />
+            <size height="65" left="35" top="384" width="350" />
+            <align>left</align>
+            <color>#ffffff</color>
+            <font name="font/MatrixBook.ttf" style="Bold" size="13" />
+            <text>{{xrostext}}</text>
+            <visible>{{rd_xros}} and {{is_rush}}</visible>
+        </text>
+        
+
+     <!-- GATE Interface -->
+        <image click="gateframe" index="3" scaleType="FIT_CENTER">
+        <size height="69" left="10" top="386" width="100" />
+        <visible>{{is_xros}}</visible>
+        </image>
+     <!-- left GATE -->
+        <image index="0">
+            <size height="613" left="0" top="0" width="421" />
+            <src>gatecolors/lgate-{{lgate}}.png</src>
+            <visible>{{is_xros}} and {{is_rush}} == false</visible>
+        </image>
+     <!-- Right GATE  -->
+        <image index="0">
+            <size height="613" left="0" top="0" width="421" />
+            <src>gatecolors/rgate-{{Rgate}}.png</src>
+            <visible>{{is_xros}} and {{is_rush}} == false</visible>
+        </image>
+        
+        
+[•]======[•]        
+        <image index="7">
+            <size height="610" left="0" top="0" when="{{cardtype}} == xros" width="421" />
+            <src>gatecolors/rdgate-{{lgate}}.png</src>
+            <visible>{{rd_xros}} and {{is_rush}}</visible>
+        </image>
+        
+         <image index="7">
+            <size height="610" left="270" top="0" when="{{cardtype}} == xros" width="421" />
+            <src>gatecolors/rdgate-{{Rgate}}.png</src>
+            <visible>{{rd_xros}} and {{is_rush}}</visible>
+        </image>
+        
+        
+[•]======[•]        
+        <image index="2">
+            <size height="680" left="0" top="-42" width="421" />
+            <src>gate/gate-{{gatename}}.png</src>
+            <visible>{{is_xros}} and {{is_rush}} == false</visible>
+        </image>
+
+    <!-- Evolve Factor Interface  -->
+    <image click="evolvefactor" index="10">
+            <size height="130" left="20" top="80" when="{{is_rush}}" width="36" />
+            <size height="36" left="150" top="100" when="{{is_pendulum}}" width="130" />
+            <size height="36" left="150" top="420" width="130" />
+            <src>none.png</src>
+            <visible>{{linkborderon}} == false and {{cardtype}} == 'evolve'</visible>
+        </image>
+            
+            
+            
+    <!-- Evolve Factor Slots  -->
+    <image index="5">
+            <size height="613" left="0" top="0" when="{{is_rush}}" width="421" />
+            <size height="613" left="0" top="-328" when="{{is_pendulum}}" width="421" />
+            <size height="613" left="0" top="0" width="421" />
+            <src when="{{is_rush}}">evfactor/rdevfactor-{{evolvefactorslots}}.png</src>
+            <src>evfactor/evfactor-{{evolvefactorslots}}.png</src>
+            <visible>{{linkborderon}} == false and {{cardtype}} == 'evolve'</visible>
+        </image>
+        
+    <!-- Evolve Factor Slot 1 -->
+    <image index="10">
+            <size height="613" left="-170.5" top="-352.5" when="{{is_rush}}" width="421" />
+            <size height="613" left="-66" top="-328" when="{{is_pendulum}}" width="421" />
+            <size height="613" left="-66" top="0" width="421" />
+            <src>evfactor/evfactor-{{evfactorslot1}}.png</src>
+            <visible>{{linkborderon}} == false and {{cardtype}} == 'evolve'</visible>
+        </image>
+    <!-- Evolve Factor Slot 2 -->
+    <image index="10">
+            <size height="613" left="-170.5" top="-319.5" when="{{is_rush}}" width="421" />
+            <size height="613" left="-33" top="-328" when="{{is_pendulum}}" width="421" />
+            <size height="613" left="-33" top="0" width="421" />
+            <src>evfactor/evfactor-{{evfactorslot2}}.png</src>
+            <visible>{{linkborderon}} == false and {{cardtype}} == 'evolve'</visible>
+        </image>
+
+    <!-- Evolve Factor Slot 3 -->
+    <image index="10">
+            <size height="613" left="-170.5" top="-287" when="{{is_rush}}" width="421" />
+            <size height="613" left="0" top="-328" when="{{is_pendulum}}" width="421" />
+            <size height="613" left="0" top="0" width="421" />
+            <src>evfactor/evfactor-{{evfactorslot3}}.png</src>
+            <visible>{{linkborderon}} == false and {{cardtype}} == 'evolve'</visible>
+        </image>
+    <!-- Evolve Factor Slot 4 -->
+    <image index="10">
+            <size height="613" left="-170.5" top="-254" when="{{is_rush}}" width="421" />
+            <size height="613" left="33" top="-328" when="{{is_pendulum}}" width="421" />
+            <size height="613" left="33" top="0" width="421" />
+            <src>evfactor/evfactor-{{evfactorslot4}}.png</src>
+            <visible>{{linkborderon}} == false and {{cardtype}} == 'evolve'</visible>
+        </image>
+    <!-- Evolve Factor Slot 5 -->
+    <image index="10">
+            <size height="613" left="-170.5" top="-221" when="{{is_rush}}" width="421" />
+            <size height="613" left="66" top="-328" when="{{is_pendulum}}" width="421" />
+            <size height="613" left="66" top="0" width="421" />
+            <src>evfactor/evfactor-{{evfactorslot5}}.png</src>
+            <visible>{{linkborderon}} == false and {{cardtype}} == 'evolve'</visible>
+        </image>
+
+
+
+    <!-- Level value  -->
+    <image click="levelvalue" index="9">
+            <size height="71" left="17" top="313" when="{{is_rush}} and {{pendulum_is_small}}" width="80" />
+
+            <size height="71" left="17" top="263" when="{{is_rush}} and {{pendulum_is_big}}" width="80" />
+            <size height="71" left="17" top="296" when="{{is_rush}} and {{pendulum_is_normal}}" width="80" />
+            <size height="71" left="17" top="366" when="{{is_rush}}" width="80" />
+            <size height="36" left="35" top="69" width="700" />
+            <src>none.png</src>
+            <visible>{{linkborderon}} == false and {{is_spelltrap}} == false</visible>
+        </image>
+
+        
+
+    <!-- extended type -->
+    <image index="1">
+            <size height="613" left="0" top="0" width="421" />
+            <src>extended/ex_{{extended}}.png</src>
+            <visible>{{card_is_ex}} and {{is_pendulum}} == false</visible>
+        </image>
+
+    <!-- Link marker -->
+        <image index="5">
+            <size height="614" left="0" top="0" width="421" />
+            <src>linkmarker/{{linkborder}}.png</src>
+            <visible>{{is_pendulum}} == false and {{is_rush}} == false</visible>
+        </image>
+        
+        <image click="linkarrows1" index="5" scaleType="FIT_CENTER">
+            <size height="38" left="36" top="97" width="38" />
+            <src>linkmarker/{{link1}}.png</src>
+            <visible>{{is_pendulum}} == false and {{is_rush}} == false and {{linkborderon}}</visible>
+        </image>
+        
+        <image click="linkarrows2" index="5" scaleType="FIT_CENTER">
+        <size height="74" left="174.5" top="65" width="74" />
+        <src>linkmarker/{{link2}}.png</src>
+        <visible>{{is_pendulum}} == false and {{is_rush}} == false and {{linkborderon}}</visible>
+        </image>
+      
+        <image click="linkarrows3" index="5" scaleType="FIT_CENTER">
+        <size height="38" left="349" top="97" width="38" />
+        <src>linkmarker/{{link3}}.png</src>             <visible>{{is_pendulum}} == false and {{is_rush}} == false and {{linkborderon}}</visible>
+        </image>
+        
+        <image click="linkarrows4" index="5" scaleType="FIT_CENTER">
+        <size height="74" left="345" top="235" width="74" />
+        <src>linkmarker/{{link4}}.png</src>             <visible>{{is_pendulum}} == false and {{is_rush}} == false and {{linkborderon}}</visible>
+        </image>
+        
+        <image click="linkarrows5" index="5" scaleType="FIT_CENTER">
+        <size height="38" left="349" top="410" width="38" />
+        <src>linkmarker/{{link5}}.png</src>
+        <visible>{{is_pendulum}} == false and {{is_rush}} == false and {{linkborderon}}</visible>
+        </image>
+        
+        <image click="linkarrows6" index="5" scaleType="FIT_CENTER">
+        <size height="74" left="174.5" top="406.5" width="74" />
+        <src>linkmarker/{{link6}}.png</src>             <visible>{{is_pendulum}} == false and {{is_rush}} == false and {{linkborderon}}</visible>
+        </image>
+        
+        <image click="linkarrows7" index="5" scaleType="FIT_CENTER">
+        <size height="38" left="36" top="410" width="38" />
+        <src>linkmarker/{{link7}}.png</src>             <visible>{{is_pendulum}} == false and {{is_rush}} == false and {{linkborderon}}</visible>
+        </image>
+        
+        <image click="linkarrows8" index="5" scaleType="FIT_CENTER">
+        <size height="74" left="3" top="235" width="74" />
+        <src>linkmarker/{{link8}}.png</src>
+        <visible>{{is_pendulum}} == false and {{is_rush}} == false and {{linkborderon}}</visible>
+        </image> 
+        
+        <!-- Rush Duel-->
+        <image click="rdstyle" index="5" scaleType="FIT_CENTER">
+              <size height="30" left="180" top="575" width="100" />
+        <visible>{{is_rush}}</visible>
+        </image> 
+        
+        <image index="-2">
+            <size height="613" left="0" top="0" width="421" />
+            <src>rdbg/cardrd-{{cardtype}}.png</src>
+            <visible>{{is_rush}}</visible>
+        </image>
+        
+        <image index="3">
+            <size height="613" left="0" top="0" width="421" />
+            <src>{{rushlabel}}.png</src>
+            <visible>{{is_rush}}</visible>
+        </image>
+        
+        <!-- Rush Duel-->
+        <image index="3">
+            <size height="613" left="0" top="0" width="421" />
+            <src>{{rushlegend}}.png</src>
+            <visible>{{is_rush}}</visible>
+        </image>
+        
+        <!--RUSH DUEL: MAXIMUM --> 
+        <image index="1">
+             <size height="613" left="0" top="-71" when="{{rd_xros}}" width="421" />
+            <size height="613" left="0" top="-54" when="{{pendulum_is_small}}" width="421" />
+            <size height="613" left="0" top="-104" when="{{pendulum_is_big}}" width="421" />
+            <size height="613" left="0" top="-71" when="{{pendulum_is_normal}}" width="421" />
+            <size height="613" left="0" top="0" width="421" />
+            <src>{{rdmaximum}}.png</src>
+            <visible>{{is_rush}} and {{is_spelltrap}} == false</visible>
+        </image>
+        
+        
+        <text click="rdmaxatk" index="11" singleline="true" >
+            <size height="30" left="276" top="306" when="{{rd_xros}}" width="70" />
+            <size height="30" left="276" top="324" when="{{pendulum_is_small}}" width="70" />
+            <size height="30" left="276" top="274" when="{{pendulum_is_big}}" width="70" />
+            <size height="30" left="276" top="306" when="{{pendulum_is_normal}}" width="70" />
+            <size height="30" left="276" top="379" width="70" />
+            <align>right|center</align>
+            <color>#ffffff</color>
+            <font name="font/RO rush.otf" style="bold" size="20" />
+        <text>{{rdmaxatk}}</text>
+            <visible>{{is_rush}} and '{{rdmaximum}}' == 'rdmaximum' and {{is_spelltrap}} == false</visible>
+        </text>
+        
+        
+        <!--RUSH DUEL LINK MARKERS-->
+        <image click="rdlinkmarkers" index="5" scaleType="FIT_CENTER">
+            <size height="88" left="13" top="308" when="{{pendulum_is_small}}" width="88" />
+            <size height="88" left="13" top="258" when="{{pendulum_is_big}}" width="88" />
+            <size height="88" left="13" top="290" when="{{pendulum_is_normal}}" width="88" />
+           <size height="88" left="13" top="362" width="88" />
+        <visible>{{linkborderon}} and {{is_rush}}</visible>
+        </image>
+        
+        <image index="10">
+            <size height="88" left="13" top="308" when="{{pendulum_is_small}}" width="88" />
+            <size height="88" left="13" top="258" when="{{pendulum_is_big}}" width="88" />
+            <size height="88" left="13" top="290" when="{{pendulum_is_normal}}" width="88" />
+            <size height="88" left="13" top="362" width="88" />
+            <src>linkmarker/rdlink-0.png</src>
+            <visible>{{is_rush}} and {{linkborderon}}</visible>
+        </image>
+        
+        <image index="10">
+            <size height="88" left="13" top="308" when="{{pendulum_is_small}}" width="88" />
+            <size height="88" left="13" top="258" when="{{pendulum_is_big}}" width="88" />
+            <size height="88" left="13" top="290" when="{{pendulum_is_normal}}" width="88" />
+            <size height="88" left="13" top="362" width="88" />
+            <src>linkmarker/{{rdlink-1}}.png</src>
+            <visible>{{is_rush}} and {{linkborderon}}</visible>
+        </image>
+        <image index="10">
+            <size height="88" left="13" top="308" when="{{pendulum_is_small}}" width="88" />
+            <size height="88" left="13" top="258" when="{{pendulum_is_big}}" width="88" />
+            <size height="88" left="13" top="290" when="{{pendulum_is_normal}}" width="88" />
+            <size height="88" left="13" top="362" width="88" />
+            <src>linkmarker/{{rdlink-2}}.png</src>
+            <visible>{{is_rush}} and {{linkborderon}}</visible>
+        </image>
+        <image index="10">
+            <size height="88" left="13" top="308" when="{{pendulum_is_small}}" width="88" />
+            <size height="88" left="13" top="258" when="{{pendulum_is_big}}" width="88" />
+            <size height="88" left="13" top="290" when="{{pendulum_is_normal}}" width="88" />
+            <size height="88" left="13" top="362" width="88" />
+            <src>linkmarker/{{rdlink-3}}.png</src>
+            <visible>{{is_rush}} and {{linkborderon}}</visible>
+        </image>
+        <image index="10">
+            <size height="88" left="13" top="308" when="{{pendulum_is_small}}" width="88" />
+            <size height="88" left="13" top="258" when="{{pendulum_is_big}}" width="88" />
+            <size height="88" left="13" top="290" when="{{pendulum_is_normal}}" width="88" />
+            <size height="88" left="13" top="362" width="88" />
+            <src>linkmarker/{{rdlink-4}}.png</src>
+            <visible>{{is_rush}} and {{linkborderon}}</visible>
+        </image>
+        <image index="10">
+            <size height="88" left="13" top="308" when="{{pendulum_is_small}}" width="88" />
+            <size height="88" left="13" top="258" when="{{pendulum_is_big}}" width="88" />
+            <size height="88" left="13" top="290" when="{{pendulum_is_normal}}" width="88" />
+            <size height="88" left="13" top="362" width="88" />
+            <src>linkmarker/{{rdlink-5}}.png</src>
+            <visible>{{is_rush}} and {{linkborderon}}</visible>
+        </image>
+        <image index="10">
+            <size height="88" left="13" top="308" when="{{pendulum_is_small}}" width="88" />
+            <size height="88" left="13" top="258" when="{{pendulum_is_big}}" width="88" />
+            <size height="88" left="13" top="290" when="{{pendulum_is_normal}}" width="88" />
+            <size height="88" left="13" top="362" width="88" />
+            <src>linkmarker/{{rdlink-6}}.png</src>
+            <visible>{{is_rush}} and {{linkborderon}}</visible>
+        </image>
+        <image index="10">
+            <size height="88" left="13" top="308" when="{{pendulum_is_small}}" width="88" />
+            <size height="88" left="13" top="258" when="{{pendulum_is_big}}" width="88" />
+            <size height="88" left="13" top="290" when="{{pendulum_is_normal}}" width="88" />
+            <size height="88" left="13" top="362" width="88" />
+            <src>linkmarker/{{rdlink-7}}.png</src>
+            <visible>{{is_rush}} and {{linkborderon}}</visible>
+        </image>
+        <image index="10">
+            <size height="88" left="13" top="308" when="{{pendulum_is_small}}" width="88" />
+            <size height="88" left="13" top="258" when="{{pendulum_is_big}}" width="88" />
+            <size height="88" left="13" top="290" when="{{pendulum_is_normal}}" width="88" />
+            <size height="88" left="13" top="362" width="88" />
+            <src>linkmarker/{{rdlink-8}}.png</src>
+            <visible>{{is_rush}} and {{linkborderon}}</visible>
+        </image>
+    </layout>
+</style>
+c>
+            <visible>{{is_rush}} and '{{rdlinkborder}}' == 'rdlink-0'</visible>
+        </image>
+        <image index="10">
+            <size height="88" left="13" top="308" when="{{pendulum_is_small}}" width="88" />
+            <size height="88" left="13" top="258" when="{{pendulum_is_big}}" width="88" />
+            <size height="88" left="13" top="290" when="{{pendulum_is_normal}}" width="88" />
+            <size height="88" left="13" top="362" width="88" />
+            <src>linkmarker/{{rdlink-7}}.png</src>
+            <visible>{{is_rush}} and '{{rdlinkborder}}' == 'rdlink-0'</visible>
+        </image>
+        <image index="10">
+            <size height="88" left="13" top="308" when="{{pendulum_is_small}}" width="88" />
+            <size height="88" left="13" top="258" when="{{pendulum_is_big}}" width="88" />
+            <size height="88" left="13" top="290" when="{{pendulum_is_normal}}" width="88" />
+            <size height="88" left="13" top="362" width="88" />
+            <src>linkmarker/{{rdlink-8}}.png</src>
+            <visible>{{is_rush}} and '{{rdlinkborder}}' == 'rdlink-0'</visible>
+        </image>
+    </layout>
+</style>
+="88" left="13" top="362" width="88" />
+            <src>linkmarker/{{rdlink-6}}.png</src>
+            <visible>{{is_rush}} and '{{rdlinkborder}}' == 'rdlink-0'</visible>
+        </image>
+        <image index="10">
+            <size height="88" left="13" top="308" when="{{pendulum_is_small}}" width="88" />
+            <size height="88" left="13" top="258" when="{{pendulum_is_big}}" width="88" />
+            <size height="88" left="13" top="290" when="{{pendulum_is_normal}}" width="88" />
+            <size height="88" left="13" top="362" width="88" />
+            <src>linkmarker/{{rdlink-7}}.png</src>
+            <visible>{{is_rush}} and '{{rdlinkborder}}' == 'rdlink-0'</visible>
+        </image>
+        <image index="10">
+            <size height="88" left="13" top="308" when="{{pendulum_is_small}}" width="88" />
+            <size height="88" left="13" top="258" when="{{pendulum_is_big}}" width="88" />
+            <size height="88" left="13" top="290" when="{{pendulum_is_normal}}" width="88" />
+            <size height="88" left="13" top="362" width="88" />
+            <src>linkmarker/{{rdlink-8}}.png</src>
+            <visible>{{is_rush}} and '{{rdlinkborder}}' == 'rdlink-0'</visible>
+        </image>
+    </layout>
+</style>
+{{pendulum_is_big}}" width="88" />
+            <size height="88" left="13" top="290" when="{{pendulum_is_normal}}" width="88" />
+            <size height="88" left="13" top="362" width="88" />
+            <src>linkmarker/{{rdlink-7}}.png</src>
+            <visible>{{is_rush}} and '{{rdlinkborder}}' == 'rdlink-0'</visible>
+        </image>
+        <image index="10">
+            <size height="88" left="13" top="308" when="{{pendulum_is_small}}" width="88" />
+            <size height="88" left="13" top="258" when="{{pendulum_is_big}}" width="88" />
+            <size height="88" left="13" top="290" when="{{pendulum_is_normal}}" width="88" />
+            <size height="88" left="13" top="362" width="88" />
+            <src>linkmarker/{{rdlink-8}}.png</src>
+            <visible>{{is_rush}} and '{{rdlinkborder}}' == 'rdlink-0'</visible>
+        </image>
+    </layout>
+</style>

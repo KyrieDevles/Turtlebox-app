@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/rootLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <AbsoluteLayout
+        android:id="@id/slideShowContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <com.kk.mse.gallery.ImageViewTouch
+            android:id="@id/image1_slideShow"
+            android:background="#00000000"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <com.kk.mse.gallery.ImageViewTouch
+            android:id="@id/image2_slideShow"
+            android:background="#00000000"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </AbsoluteLayout>
+    <AbsoluteLayout
+        android:id="@id/abs"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <com.kk.mse.gallery.ImageViewTouch
+            android:id="@id/image"
+            android:background="#ff000000"
+            android:focusableInTouchMode="true"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </AbsoluteLayout>
+</RelativeLayout>

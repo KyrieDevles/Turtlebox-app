@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/bg_dialog_input"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:textSize="22.0sp"
+        android:textStyle="bold"
+        android:textColor="#ff999999"
+        android:gravity="center"
+        android:id="@id/element_title"
+        android:padding="10.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:background="#ffababab"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" />
+        <com.kk.mse.widget.WheelView
+            android:id="@id/element_wv"
+            android:layout_width="0.0dip"
+            android:layout_height="150.0dip"
+            android:layout_weight="1.0"
+            app:normalTextColor="#ff666666"
+            app:normalTextSize="20.0sp"
+            app:selectedTextColor="#ff333333"
+            app:selectedTextSize="28.0sp"
+            app:unitHight="50.0dip"
+            app:itemNumber="3"
+            app:lineColor="#ff999999"
+            app:maskHight="32.0dip"
+            app:noEmpty="true" />
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" />
+    </LinearLayout>
+    <View
+        android:background="#ffababab"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="18.0sp"
+            android:textStyle="bold"
+            android:textColor="#ff999999"
+            android:gravity="center"
+            android:id="@id/element_cancel"
+            android:padding="10.0dip"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:layout_weight="1.0" />
+        <View
+            android:background="#ffababab"
+            android:layout_width="0.5dip"
+            android:layout_height="fill_parent" />
+        <TextView
+            android:textSize="18.0sp"
+            android:textStyle="bold"
+            android:textColor="#ff999999"
+            android:gravity="center"
+            android:id="@id/element_ok"
+            android:padding="10.0dip"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>
