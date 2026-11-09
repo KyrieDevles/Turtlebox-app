@@ -20,8 +20,6 @@
 
 .field private r:F
 
-.field public condenseFloor:F
-
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
