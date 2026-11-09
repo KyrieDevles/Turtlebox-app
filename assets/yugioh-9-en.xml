@@ -425,13 +425,7 @@
     
     
     <!-- Paragraph Style (like ygocarder): Condense level 5-1, Minimum Lines, Justify Ratio -->
-    <data name="condense" default="0.6" desc="Condense (5 = compress words most, 1 = add lines sooner)">
-        <item name="5" value="0.6" />
-        <item name="4" value="0.645" />
-        <item name="3" value="0.7" />
-        <item name="2" value="0.74" />
-        <item name="1" value="0.85" />
-    </data>
+    <data name="condense" default="60" desc="Condense % (narrowest text width, 100 = off)" type="text" />
     <data name="minline_effect" default="0" desc="Minimum Lines - Effect" type="text" />
     <data name="minline_pendulum" default="0" desc="Minimum Lines - Pendulum Effect" type="text" />
     <data name="justify_effect" default="100" desc="Justify Ratio % - Effect" type="text" />

@@ -873,7 +873,7 @@
 
     move-result v6
 
-    const v16, 0x3ee66666    # 0.45f of a space width at ratio 100
+    const v16, 0x3f800000    # 1.0f of a space width at ratio 100
 
     mul-float v6, v6, v16
 

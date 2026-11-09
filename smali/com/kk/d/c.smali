@@ -670,6 +670,28 @@
     move v1, v2
 
     :cond_nofloor
+    # typed as a percent (60 = 60%): anything above 1.0 is divided by 100
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    cmpl-float v3, v1, v3
+
+    if-lez v3, :cond_not_pct
+
+    const/high16 v3, 0x42c80000    # 100.0f
+
+    div-float/2addr v1, v3
+
+    :cond_not_pct
+    # lower bound 0.30 so a typo cannot flatten the text
+    const v3, 0x3e99999a    # 0.30f
+
+    cmpg-float v3, v1, v3
+
+    if-gez v3, :cond_not_low
+
+    const v1, 0x3e99999a
+
+    :cond_not_low
     const/high16 v3, 0x3f800000    # 1.0f
 
     cmpl-float v3, v1, v3
@@ -702,11 +724,22 @@
 
     int-to-float v4, v4
 
-    const v5, 0x3f666666    # 0.9f
+    # real line height ratio (line height / font size) instead of a fixed 0.9
+    invoke-virtual {v2}, Lcom/kk/d/a;->getLineHeight()I
 
-    mul-float v4, v4, v5
+    move-result v5
 
-    div-float/2addr v4, v3
+    int-to-float v5, v5
+
+    invoke-virtual {v2}, Lcom/kk/d/a;->getTextSize()F
+
+    move-result v6
+
+    div-float/2addr v5, v6
+
+    mul-float/2addr v5, v3
+
+    div-float/2addr v4, v5
 
     cmpg-float v5, v4, p4
 
