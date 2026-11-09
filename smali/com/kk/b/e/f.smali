@@ -247,15 +247,15 @@
     :goto_4
     iget v0, p1, Lcom/kk/b/a/a/c;->condense:F
 
-    iput v0, p0, Lcom/kk/d/a;->condenseFloor:F
+    iput v0, p0, Lcom/kk/d/d;->condenseFloor:F
 
     iget v0, p1, Lcom/kk/b/a/a/c;->minline:F
 
-    iput v0, p0, Lcom/kk/d/a;->minLines:F
+    iput v0, p0, Lcom/kk/d/d;->minLines:F
 
     iget v0, p1, Lcom/kk/b/a/a/c;->justify:F
 
-    iput v0, p0, Lcom/kk/d/a;->justifyRatio:F
+    iput v0, p0, Lcom/kk/d/d;->justifyRatio:F
 
     iget-object v0, p1, Lcom/kk/b/a/a/c;->n:Ljava/lang/String;
 
