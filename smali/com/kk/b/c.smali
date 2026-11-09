@@ -1227,24 +1227,84 @@
 
     check-cast v0, Ljava/lang/String;
 
-    if-eqz v0, :cond_cd_skip
+    if-eqz v0, :cond_condense_skip
 
     invoke-virtual {p0, v0}, Lcom/kk/b/c;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_cd_skip
+    if-eqz v0, :cond_condense_skip
 
-    :try_cd_s
+    :try_condense_s
     invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v0
 
     iput v0, v1, Lcom/kk/b/a/a/c;->condense:F
-    :try_cd_e
-    .catch Ljava/lang/NumberFormatException; {:try_cd_s .. :try_cd_e} :cond_cd_skip
+    :try_condense_e
+    .catch Ljava/lang/NumberFormatException; {:try_condense_s .. :try_condense_e} :cond_condense_skip
 
-    :cond_cd_skip
+    :cond_condense_skip
+
+    # ---- PATCH: <minline> element -> TextData.minline (0 = not set) ----
+    invoke-virtual {p1}, Lcom/kk/b/a/b/c;->getMinLine()[Lcom/kk/b/c/h;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->a([Lcom/kk/b/c/i;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v0, :cond_minline_skip
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_minline_skip
+
+    :try_minline_s
+    invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v0
+
+    iput v0, v1, Lcom/kk/b/a/a/c;->minline:F
+    :try_minline_e
+    .catch Ljava/lang/NumberFormatException; {:try_minline_s .. :try_minline_e} :cond_minline_skip
+
+    :cond_minline_skip
+
+    # ---- PATCH: <justify> element -> TextData.justify (0 = not set) ----
+    invoke-virtual {p1}, Lcom/kk/b/a/b/c;->getJustify()[Lcom/kk/b/c/h;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->a([Lcom/kk/b/c/i;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v0, :cond_justify_skip
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_justify_skip
+
+    :try_justify_s
+    invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v0
+
+    iput v0, v1, Lcom/kk/b/a/a/c;->justify:F
+    :try_justify_e
+    .catch Ljava/lang/NumberFormatException; {:try_justify_s .. :try_justify_e} :cond_justify_skip
+
+    :cond_justify_skip
 
     .line 305
     invoke-virtual {p1}, Lcom/kk/b/a/b/c;->getText()Ljava/lang/String;

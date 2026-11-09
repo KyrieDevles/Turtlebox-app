@@ -2,7 +2,7 @@
 <style height="613" savename="{{cardname}}" width="421">
     <styleinfo>
         <name>yugioh-10-en</name>
-        <desc>TurtleBox</desc>
+        <desc>YGO Kyrie</desc>
         <author>Original author:CaiCai</author>
         <version>20160309</version>
         <app-version>2</app-version>
@@ -14,55 +14,7 @@
         <item name="default" value="" />
         <item name="no frame" value="noframe" />
         <item name="full image" value="full" />
-        <item name="Extended (Full)" value="white" />
-        <item name="Extended (Semi)" value="white50" />
-        <item name="Extended (non-transparent)" value="extendedfull" />
     </data>
-    
-       <data name="ymointerface" desc="YMO Type Label" type="multi_select">
-        <item name="ymolabelprimary" value="ymolabelprimary" />
-        <item name="ymolabelsecondary" value="ymolabelsecondary" />
-        <item name="ymolabeltertiary" value="ymolabeltertiary" />
-    </data>
-        <data name="ymolabelprimary" default="effect" desc="Primary Type">
-        <item name="None" value="" />
-        <item name="Effect" value="effect" />
-        <item name="Normal" value="normal" />
-        <item name="Gemini" value="gemini" />
-        <item name="Normal Synergy" value="normalspell" />
-        <item name="Quickplay Synergy" value="quickplay" />
-        <item name="Continuous Synergy" value="continuous" />
-        <item name="Counter Synergy" value="counter" />
-        <item name="Field Synergy" value="field" />
-        <item name="Incantation Synergy" value="incantation" />
-        <item name="Equip/Weapon" value="weapon" />
-        <item name="Equip/Armor" value="armor" />
-        <item name="Equip/Influence" value="influence" />
-        <item name="Equip/Accessory" value="accessory" />
-     </data>
-        <data name="ymolabelsecondary" default="" desc="Secondary Type">
-        <item name="None" value="" />
-        <item name="Ritual" value="ritual" />
-        <item name="Fusion" value="fusion" />
-        <item name="Anima" value="anima" />
-        <item name="Dynamis" value="dynamis" />
-        <item name="Evolve" value="evolve" />
-        <item name="Switch" value="switch" />
-        <item name="Omega" value="omega" />
-        <item name="Neuron" value="neuron" />
-        <item name="Pulse" value="pulse" />
-        <item name="Spatial" value="spatial" />
-     </data>
-        <data name="ymolabeltertiary" default="" desc="Tertiary Type">
-        <item name="None" value="" />
-        <item name="Magna" value="magna" />
-        <item name="Union" value="union" />
-        <item name="Spirit" value="spirit" />
-        <item name="Flip" value="flip" />
-        <item name="Tuner" value="tuner" />
-     </data>
-    
-    
     
         <data name="evolvefactor" desc="Evolve Factor" type="multi_select">
         <item name="evolvefactorslots" value="evolvefactorslots" />
@@ -158,9 +110,10 @@
     
     
     
-        <data name="attribute" desc="Attributes" type="multi_select">
+        <data name="attribute" desc="Attribute/Grade" type="multi_select">
         <item name="cardattr" value="cardattr" />
-        <item name="reserve" value="reserve" />
+        <item name="grade" value="grade" />
+        <item name="gradenum" value="gradenum" />
         <item name="doublesided" value="doublesided" />
     </data>
     
@@ -189,25 +142,77 @@
         <item name="dream" value="dream" />
         <item name="spell" value="spell" />
         <item name="trap" value="trap" />
-        <item name="Field" value="field" />
-        <item name="Equip" value="equip" />
     </data>
     
-    <data name="reserve" default="none" desc="Reserve">
+    <data name="grade" default="none" desc="Grades">
         <item name="none" value="none" />
-        <item name="Reserve 0" value="reserve-0" />
-        <item name="Reserve 1" value="reserve-1" />
-        <item name="Reserve 2" value="reserve-2" />
-        <item name="Reserve 3" value="reserve-3" />
-        <item name="Reserve 4" value="reserve-4" />
-        <item name="Reserve 5" value="reserve-5" />
-        <item name="Reserve 6" value="reserve-6" />
+        <item name="grade dark" value="dark" />
+        <item name="grade earth" value="earth" />
+        <item name="grade fire" value="fire" />
+        <item name="grade light" value="light" />
+        <item name="grade water" value="water" />
+        <item name="grade wind" value="wind" />
+        <item name="grade divine" value="divine" />
+        <item name="grade dream" value="dream" />
     </data>
+    <data name="gradenum" default="" desc="Grade Number" type="text" />
+
+  
+   <data name="gateframe" desc="Gate" type="multi_select">
+        <item name="gate" value="gate" />
+        <item name="gatename" value="gatename" />
+        <item name="Rgate" value="Rgate" />
+        <item name="lgate" value="lgate" />
+     </data>
+     
+        <data name="lgate" default="fusion" desc="Left Gate">
+       <item name="None" value="" />
+        <item name="Normal" value="normal" />
+        <item name="Effect" value="effect" />
+        <item name="Ritual" value="ritual"/>
+        <item name="Fusion" value="fusion" />
+        <item name="Synchro" value="synchro" />
+        <item name="Xyz" value="xyz" />
+        <item name="Link" value="link" />
+        <item name="Xros" value="xros" />
+        <item name="Evolve" value="evolve" />
+        <item name="Evolute" value="evolute" />
+        <item name="Bigbang" value="bigbang" />
+        <item name="Timeleap" value="timeleap" />
+        <item name="Spatial" value="spatial" />
+        
+     </data>
+     <data name="Rgate" default="fusion" desc="Right Gate">
+        <item name="None" value="" />
+        <item name="Normal" value="normal" />
+        <item name="Effect" value="effect" />
+        <item name="Ritual" value="ritual"/>
+        <item name="Fusion" value="fusion" />
+        <item name="Synchro" value="synchro" />
+        <item name="Xyz" value="xyz" />
+        <item name="Link" value="link" />
+        <item name="Xros" value="xros" />
+        <item name="Evolve" value="evolve" />
+        <item name="Evolute" value="evolute" />
+        <item name="Bigbang" value="bigbang" />
+        <item name="Timeleap" value="timeleap" />
+        <item name="Spatial" value="spatial" />
+     </data>
+    <data name="gate" default="gate-0" desc="Gate Frame">
+        <item name="Off" value="none" />
+        <item name="On" value="gate-0" />
+     </data>
+    <data name="gatename" default="single" desc="Gate Name Plate">
+        <item name="Single" value="single" />
+        <item name="Dual" value="dual" />
+     </data>
+    
+    
+    
     
     <data name="cardtype" default="effect" desc="Card Type">
         <item name="test2" value="test2" />
         <item name="test" value="test" />
-        <item name="Dynamis2" value="dynamispink" />
         <item name="Normal" value="normal" />
         <item name="Effect" value="effect" />
         <item name="Ritual" value="ritual" />
@@ -227,9 +232,7 @@
         <item name="Hamon" value="hamon" />
         <item name="Dark synchro" value="dsynchro" />
         <item name="Zarc" value="zarc" />
-        <item name="Anima" value="xros" />
-        <item name="Dynamis" value="dynamis" />
-        <item name="Dynamis Backside" value="dynamisback" />
+        <item name="Xros" value="xros" />
         <item name="Evolve" value="evolve" />
         <item name="Switch" value="switch" />
         <item name="Gemini" value="gemini" />
@@ -238,13 +241,7 @@
         <item name="Bigbang" value="bigbang" />
         <item name="Time Leap" value="timeleap" />
         <item name="Origin Spatial" value="spatial" />
-        <item name="Altered Spatial" value="spatial2" />
-        <item name="Omega (YMO only)" value="omega" />
-        <item name="Neuron (YMO only)" value="neuron" />
-        <item name="Pulse (YMO only)" value="pulse" />
-        <item name="Equip Armor/Accessory (YMO only)" value="equip2" />
-        <item name="Equip (YMO only)" value="equip" />
-        <item name="Field (YMO only)" value="field" />
+        <item name="Altered Spatial" value="spatial2" />        
     </data>
     
     
@@ -331,17 +328,9 @@
     <data name="cardcode" default="" desc="Card Code" type="text" />
     <data name="cardtext" default="Input Monster Effect" desc="Text" type="text" />
     <data name="cardptext" default="Input Pendulum Effect" desc="Pendulum Text" type="text" />
-    <data name="xrostext" default="Input Anima Effect" desc="Xros Effect" type="text" />
-    
-    <data name="synapsetext1" default="Input Synapse 1 Effect" desc="Synapse 1 Effect" type="text" />
-    <data name="synapsetext2" default="Input Synapse 2 Effect" desc="Synapse 2 Effect" type="text" />
-    <data name="synapsetext3" default="Input Synapse 3 Effect" desc="Synapse 3 Effect" type="text" />
-    <data name="pulsetext" default="Input Pulse Effect" desc="Pulse Effect" type="text" />
-    <data name="rightsidetext" default="Input Right Side Effect" desc="Dynamis Conditions" type="text" />
-    
+    <data name="xrostext" default="Input Xros Effect" desc="Xros Effect" type="text" />
+    <data name="gatetext" default="Level 7" desc="Gate Name" type="text" />
     <data name="rdmaxatk" default="0" desc="Maximum ATK" type="text" />
-    <data name="pulseatk" default="3000" desc="Pulse ATK" type="text" />
-    <data name="omegacondition" default="Input Omega Condition" desc="Omega Condition" type="text" />
     <data name="cardpleft" default="0" desc="Pendulum Left" type="text" />
     <data name="cardpright" default="0" desc="Pendulum Right" type="text" />
     <data name="edition" default="" desc="Edition" type="text" />
@@ -349,9 +338,6 @@
     <data name="cardnum" default="" desc="Number" type="text" />
     <data name="cardcopy" default="   ©2020 Studio Dice/SHUEISHA, TV TOKYO, KONAMI" desc="copyright" type="text" />
     <data name="cardcode_image" default="{{cardcode}}.png" desc="Image" type="image" />
-    
-    <data name="ymoprimaryrace" default="" desc="Primary Type" type="text" />
-    <data name="ymosecondaryrace" default="" desc="Secondary Type" type="text" />
 
     <data name="pimagetype" default="" desc="Pendulum Artwork Style">
         <item name="Default" value="" />
@@ -422,12 +408,30 @@
         <item name="pande small" value="pandes" />
         <item name="relay"  value= 'relay' />
     </data>
+
+    <data name="extended" default="none" desc="extended art type">
+        <item name="none" value="none" />
+        <item name="full" value="white" />
+        <item name="semi" value="white50" />
+        <item name="non-transparent" value="full" />
+    </data>
     
-    
+    <!-- Paragraph Style (like ygocarder): Condense level 5-1, Minimum Lines, Justify Ratio -->
+    <data name="condense" default="0.6" desc="Condense (5 = compress words most, 1 = add lines sooner)">
+        <item name="5" value="0.6" />
+        <item name="4" value="0.645" />
+        <item name="3" value="0.7" />
+        <item name="2" value="0.74" />
+        <item name="1" value="0.85" />
+    </data>
+    <data name="minline_effect" default="0" desc="Minimum Lines - Effect" type="text" />
+    <data name="minline_pendulum" default="0" desc="Minimum Lines - Pendulum Effect" type="text" />
+    <data name="justify_effect" default="100" desc="Justify Ratio % - Effect" type="text" />
+    <data name="justify_pendulum" default="100" desc="Justify Ratio % - Pendulum Effect" type="text" />
+
     <data name="cardstyles" default="series 10" desc="Card Template Styles">
         <item name="Series 10" value="none"  />
         <item name="Rush Duel" value="rushduel" />
-        <item name="YMO" value="ymo" />
         </data>
 
     <data name="stmark" default="" desc="spell/trap">
@@ -458,17 +462,10 @@
 
     <data name="race" default="[/]" desc="Input types" type="text" />
 
-    <data name="typeline" desc="Typelines" type="multi_select">
+    <data name="cardmonster" desc="Typelines" type="multi_select">
+        <item name="Monster Type" value="Monster Type" />
         <item name="race" value="race" />
     </data>
-
-<data name="condense" default="0.7" desc="Effect Text Condense">
-    <item name="off (shrink font only)" value="1" />
-    <item name="low (85%)" value="0.85" />
-    <item name="normal (70%)" value="0.7" />
-    <item name="high (60%)" value="0.6" />
-    <item name="max (50%)" value="0.5" />
-</data>
 
     <data name="cardfoil" desc="Foil" type="multi_select">
         <item name="cardrare" value="cardrare" />
@@ -585,7 +582,7 @@
         <item name="pimagetype" value="pimagetype" />
         <item name="namecolor" value="namecolor" />
         <item name="linkborder" value="linkborder" />
-        <item name="condense" value="condense" />
+        <item name="extended" value="extended" />
     </data>
     
 
@@ -607,38 +604,25 @@
     <bool name="pendulum_is_small" value="'{{pendulum}}' == 'small' or '{{pendulum}}' == 'pandes'" />
     <bool name="pendulum_nots_big" value="{{pendulum_is_small}} or {{pendulum_is_normal}}" />
     <bool name="pendulum_nots_small" value="{{pendulum_is_normal}} or {{pendulum_is_big}}" />
-    <bool name="is_spelltrap" value="'{{cardtype}}' == 'spell' or '{{cardtype}}' == 'trap' or '{{cardtype}}' == 'equip'" />
+    <bool name="is_spelltrap" value="'{{cardtype}}' == 'spell' or '{{cardtype}}' == 'trap' or '{{extended}}' == 'spellex' or '{{extended}}' == 'trapex'" />
     <bool name="rare_type_is_normal" value="'{{rare_type}}' == ''" />
     <bool name="rare_type_is_middle" value="'{{rare_type}}' == 'middle'" />
     <bool name="rare_type_is_full" value="'{{rare_type}}' == 'full'" />
     
     
-    <bool name="card_is_black" value="'{{cardtype}}' == 'xyz' or '{{cardtype}}' == 'custom' or '{{cardtype}}' == 'xros' or '{{cardtype}}' == 'dsynchro' or '{{cardtype}}' == 'timeleap' or '{{cardtype}}' == 'evolute' or '{{cardtype}}' == 'bigbang' or '{{cardtype}}' == 'manaburst' or '{{cardtype}}' == 'evolve' or '{{cardtype}}' == 'neuron' or '{{cardtype}}' == 'omega'" />
+    <bool name="card_is_black" value="'{{cardtype}}' == 'xyz' or '{{cardtype}}' == 'custom' or '{{cardtype}}' == 'xros' or '{{cardtype}}' == 'dsynchro' or '{{cardtype}}' == 'timeleap' or '{{cardtype}}' == 'evolute' or '{{cardtype}}' == 'bigbang' or '{{cardtype}}' == 'manaburst' or '{{cardtype}}' == 'evolve'" />
     
     <bool name="rush_black" value="'{{cardtype}}' == 'xyz' or '{{cardtype}}' == 'xros' or '{{cardtype}}' == 'dsynchro' or '{{cardtype}}' == 'timeleap' or '{{cardtype}}' == 'evolute' or '{{cardtype}}' == 'bigbang' or '{{cardtype}}' == 'manaburst' or '{{cardtype}}' == 'evolve'" />
     
-    <bool name="card_is_ex" value="'{{image_type}}' == 'white' or '{{image_type}}' == 'white50' or '{{image_type}}' == 'extendedfull'" />        
+    <bool name="card_is_ex" value="'{{extended}}' == 'normalex' or '{{extended}}' == 'effectex' or '{{extended}}' == 'ritualex' or '{{extended}}' == 'fusionex' or '{{extended}}' == 'synchroex' or '{{extended}}' == 'xyzex' or '{{extended}}' == 'pendulumex' or '{{extended}}' == 'linkex' or '{{extended}}' == 'evoltex' or '{{extended}}' == 'spellex' or '{{extended}}' == 'trapex' or '{{extended}}' == 'white' or '{{extended}}' == 'white70' or '{{extended}}' == 'white50' or '{{extended}}' == 'full'" />        
  
      <bool name="is_rush" value="'{{cardstyles}}' == 'rushduel'" />
-     
-     <bool name="is_ymo" value="'{{cardstyles}}' == 'ymo'" />
  
      <bool name="is_xros" value="'{{cardtype}}' == 'xros'" />
-     
-     <bool name="is_neuron" value="'{{cardtype}}' == 'neuron'" />
-     
-     <bool name="is_armor" value="'{{ymolabelprimary}}' == 'armor'" />
-     <bool name="is_weapon" value="'{{ymolabelprimary}}' == 'weapon'" />
-     
-     <bool name="is_dynamis" value="'{{cardtype}}' == 'dynamis'" />
-     <bool name="is_dynamisback" value="'{{cardtype}}' == 'dynamisback'" />
-     
      
      <bool name="rd_xros" value=" '{{cardtype}}' == 'xros' and {{is_rush}}" />
      
      <bool name="is_relay" value="'{{pendulum}}' == 'relay'" />
-     
-     <bool name="is_magna" value="'{{reserve}}' != 'none'" />
      
      <bool name="is_ds" value="'{{doublesided}}' == 'converse' or '{{doublesided}}' == 'obverse' or '{{doublesided}}' == 'reverse'" />   
      
@@ -648,7 +632,7 @@
     <bool name="has_name_color" value="'{{namecolor}}' != ''" />
     <layout>
         <size height="613" left="0" top="0" width="421" />
-        <image click="cardbg" index="-7">
+        <image click="cardbg" index="-5">
             <size height="613" left="0" top="0" width="421" />
             <src>bg/card-{{cardtype}}.png</src>
         </image>
@@ -656,7 +640,6 @@
    <!-- artwork frame -->
         <image index="-5">
             <size height="613" left="0" top="0" width="421" />
-            <src when="'{{cardtype}}' == 'evolve'">evfactor/artwork-evolve.png</src>
             <src>artwork-default.png</src>
             <visible>{{is_rush}} == false and {{is_pendulum}} == false and {{is_xros}} == false and {{card_is_ex}} == false</visible>
         </image>
@@ -677,16 +660,13 @@
         </image>
 
         <!-- artwork image-->
-        <image background="#000000" click="cardcode_image" index="-5">
-            <size height="587" left="10" top="12.5" when="{{cardtype}} == 'field'" width="400" />
+        <image background="#000000" click="cardcode_image" index="-4">
             
-           <size height="362" left="25" top="85" when="{{is_ymo}}" width="368" />
-
            <size height="293" left="28.7" top="110" when="{{pendulum_is_small}} and {{pimage_is_rect}}" width="364.5" />
            
            <size height="295" left="28.7" top="88" when="{{is_xros}} and {{pimage_is_rect}}" width="364.5" />
            
-            <size height="472" left="24" top="107" when="{{is_xros}} and {{pimage_is_full}}" width="373" />
+            <size height="490" left="28.7" top="88" when="{{is_xros}} and {{pimage_is_full}}" width="364.5" />
             
             <size height="472" left="24" top="107" when="{{pimage_is_full}}" width="373" />
            
@@ -696,7 +676,7 @@
             
            <size height="377" left="20" top="62" when="{{is_rush}} and {{is_pendulum}}" width="380" />
             
-            <size height="350" left="28.7" top="110" when="{{is_xros}}" width="364.5" />
+            <size height="365" left="28.7" top="87" when="{{is_xros}}" width="364.5" />
             
            <size height="358" left="28.7" top="110" when="{{pendulum_is_big}}" width="364.5" />
            
@@ -707,13 +687,11 @@
             
             <size height="587" left="10" top="12.5" when="{{image_is_full}}" width="400" />
             
-            <size height="345" left="28.5" top="110" when="{{image_type}} == 'extendedfull'" width="364.5" />
+            <size height="345" left="28.5" top="110" when="{{extended}} == 'full'" width="364.5" />
             
             <size height="472" left="24" top="107" when="{{card_is_ex}}" width="373" />
-
-            <size height="380" left="22" top="61" when="{{is_rush}}" width="376" />
             
-            <size height="330" left="45.5" top="96" when="{{cardtype}} == 'evolve'" width="330" />
+            <size height="380" left="22" top="61" when="{{is_rush}}" width="376" />
             
             <size height="319" left="51.5" top="113" width="319" />
             <src>{{cardcode_image}}</src>
@@ -745,7 +723,7 @@
         </image>
         
         <!-- pend background（transparent） -->
-        <image index="-6">
+        <image index="-5">
             <size height="613" left="0" top="0" width="421" />
             <src>blankbg.png</src>
             <visible>{{is_pendulum}} and {{pimage_is_rect}}</visible>
@@ -781,7 +759,6 @@
         <image index="1">
             <size height="613" left="0" top="0" when="{{is_rush}}" width="421" />
             <size height="613" left="0" top="0" width="421" />
-            <src when="{{is_ymo}}">ymostyle/ymostyle-pendulum.png</src>
             <src when="{{is_rush}}">pendulum/rdpendulum_{{pendulum}}.png</src>
             <src>pendulum/pendulum_{{pendulum}}.png</src>
             <visible>{{is_pendulum}}</visible>
@@ -814,17 +791,15 @@
         
         <!-- CARD NAME -->
         <text click="cardname" index="2" singleline="true">
-            <size height="70" left="20" top="-13" when="{{is_rush}} and {{is_magna}}" width="315" />
-            <size height="70" left="61" top="-13" when="{{is_rush}} and {{is_ds}}" width="280" />
-            <size height="70" left="75" top="-1" when="{{is_ds}}" width="270" />
-            <size height="70" left="32" top="-1" when="{{is_magna}}" width="275" />
-            <size height="70" left="20" top="-13" when="{{is_rush}}" width="315" />
-            <size height="70" left="32" top="-1" width="312" />
+            <size height="40" left="61" top="17" when="{{is_rush}} and {{is_ds}}" width="280" />
+            <size height="40" left="71" top="27" when="{{is_ds}}" width="280" />
+            <size height="40" left="20" top="22" when="{{is_rush}}" width="315" />
+            <size height="40" left="32" top="33" width="313" />
             <align>left</align>
             <color when="{{has_name_color}}">{{namecolor}}</color>
             <color when="{{card_name_is_white}}">#ffffff</color>
             <color>#000000</color>
-            <font name="font/MatrixSmallCapsRegularModded.otf" style="normal" size="50" />
+            <font name="font/MatrixRegularSmallCapsMod.otf" style="normal" size="49" />
             <text>{{cardname}}</text>
         </text>
 
@@ -856,7 +831,7 @@
             <src when="{{cardtype}} == 'manaburst'">mana/mana-{{cardlevel}}.png</src>
             <src when="{{is_rush}}">level/rdlevel-{{cardlevel}}.png</src>
             <src>level/level-{{cardlevel}}.png</src>
-            <visible>{{linkborderon}} == false and {{is_spelltrap}} == false and {{is_ymo}} == false</visible>
+            <visible>{{linkborderon}} == false and {{is_spelltrap}} == false and {{is_xros}} == false</visible>
         </image>
 
         <!-- Spell Trap Mark -->
@@ -880,39 +855,31 @@
         </image>
         
         <!-- Race/Type text -->
-        <text click="typeline" index="18" singleline="true" >
-            
-            <size height="30" left="29" top="443" when="{{is_ymo}}" width="313" />
-            
+        <text click="cardmonster" index="20" singleline="true" >
             <size height="30" left="29" top="436" when="{{is_rush}}" width="313" />
             <size height="30" left="33" top="468" when="{{pendulum_is_big}}" width="361" />
             <size height="30" left="33" top="453" width="361" />
             <align>left|center</align>
             <color when="{{is_rush}} and {{rush_black}} and {{is_pendulum}} == false and {{is_relay}} == false">#ffffff</color>
             <color>#000000</color>
-            <font name="font/ITCSerifSmallCapsBoldMod.ttf" style="normal" size="15" when="{{is_ymo}}" />
             <font name="font/ITCSerifSmallCapsBoldMod.ttf" style="normal" size="17" when="{{is_rush}}" />
             <font name="font/ITCSerifSmallCapsBoldMod.otf" style="normal" size="17" />
             <text>{{race}}</text>
-            <visible>{{is_spelltrap}} == false and {{is_ymo}} == false</visible>
+            <visible>{{is_spelltrap}} == false</visible>
         </text>
-        
-        
         <!-- ATK value -->
         <text click="atkdef" index="3">
-            <size height="18" left="270" top="559" when="{{is_ymo}}" width="50" />
             <size height="30" left="146" top="338" when="{{is_rush}} and {{rd_xros}}" width="70" />
             <size height="30" left="146" top="355" when="{{is_rush}} and {{pendulum_is_small}}" width="70" />
             <size height="30" left="146" top="305" when="{{is_rush}} and {{pendulum_is_big}}" width="70" />
-            <size height="30" left="146" top="338" when="{{is_rush}} and {{pendulum_is_normal}}" width="70" />
-            <size height="30" left="146" top="409" when="{{is_rush}}" width="70" />
-            <size height="18" left="251" top="559" width="50" />
-         <align>right|center</align>
+<size height="30" left="146" top="338" when="{{is_rush}} and {{pendulum_is_normal}}" width="70" />
+<size height="30" left="146" top="409" when="{{is_rush}}" width="70" />
+<size height="18" left="251" top="559" width="50" />
+<align>right|center</align>
             <color when="{{is_rush}}">#ffffff</color>
             <color>#000000</color>
             <font name="font/RO rush.otf" style="bold" size="20"
                 when="{{is_rush}}" />
-    ITCSerifSmallCapsBoldMod.otf
             <font name="font/MatrixBold.otf" style="normal" size="18" when="{{atkvalue}} == '?'"/>
             <font name="font/MatrixBoldSmallCaps.otf" style="normal" size="18.5"/> 
             <text>{{atkvalue}}</text>
@@ -920,17 +887,15 @@
         </text>
         <!-- ATK Label -->
             <image index="2" scaleType="FIT_CENTER">
-            <size height="613" left="0" top="0" when="{{is_ymo}}" width="421" />
             <size height="613" left="0" top="-70" when="{{is_rush}} and {{rd_xros}}" width="421" />
             <size height="613" left="0" top="-54" when="{{is_rush}} and {{pendulum_is_small}}" width="421" />
             <size height="613" left="0" top="-104" when="{{is_rush}} and {{pendulum_is_big}}" width="421" />
             <size height="613" left="0" top="-72" when="{{is_rush}} and {{pendulum_is_normal}}" width="421" />
             <size height="613" left="0" top="0" when="{{is_rush}}" width="421" />
             <size height="615" left="-3" top="-2" width="426.5" />
-            <src when="{{is_ymo}}">ymostyle/ymo-{{atk}}.png</src>
             <src when="{{is_rush}}">rd-{{atk}}.png</src>
             <src>{{atk}}.png</src>
-            <visible>{{ATK}} == ATK and {{is_spelltrap}} == false and {{is_armor}} == false</visible>
+            <visible>{{ATK}} == ATK and {{is_spelltrap}} == false</visible>
         </image>
         <!-- DEF value -->
         <text click="atkdef" index="3">
@@ -949,22 +914,19 @@
             <font name="font/LINK.ttf" style="normal" size="19" when="{{lnk}} == 'lnk'"/>
             <font name="font/MatrixBoldSmallCaps.otf" style="normal" size="18.5"/>
             <text>{{defvalue}}</text>
-            <visible>{{is_spelltrap}} == false and {{is_armor}} == false and {{is_weapon}} == false</visible>
+            <visible>{{is_spelltrap}} == false</visible>
         </text>
         <!-- DEF Label -->
         <image index="2" scaleType="FIT_CENTER">
-            <size height="613" left="-67" top="0" when="{{is_ymo}} and {{is_armor}}" width="421" />
-            <size height="613" left="0" top="0" when="{{is_ymo}}" width="421" />
             <size height="613" left="0" top="-70" when="{{is_rush}} and {{rd_xros}}" width="421" />
             <size height="613" left="0" top="-54" when="{{is_rush}} and {{pendulum_is_small}}" width="421" />
             <size height="613" left="0" top="-104" when="{{is_rush}} and {{pendulum_is_big}}" width="421" />
             <size height="613" left="0" top="-72" when="{{is_rush}} and {{pendulum_is_normal}}" width="421" />
             <size height="613" left="0" top="0" when="{{is_rush}}" width="421" />
             <size height="615" left="-3" top="-2" width="426.5" />
-            <src when="{{is_ymo}}">ymostyle/ymo-{{def}}.png</src>
             <src when="{{is_rush}}">rd-{{def}}.png</src>
             <src>{{def}}.png</src>
-            <visible>{{DEF}} == DEF and {{is_spelltrap}} == false and {{is_weapon}} == false</visible>
+            <visible>{{DEF}} == DEF and {{is_spelltrap}} == false</visible>
         </image>
         <!-- Link Label -->
             <image index="5" scaleType="FIT_CENTER">
@@ -996,11 +958,10 @@
                 when="{{is_rush}}" />
             <font name="font/MatrixBoldSmallCaps.otf" style="normal" size="27" />
             <text>{{cardpleft}}</text>
-            <visible>{{is_pendulum}} and {{is_ymo}} == false</visible>
+            <visible>{{is_pendulum}}</visible>
         </text>
         <!-- Pendulum Scale Right -->
         <text click="cardpright" index="2">
-            <size height="35" left="238" top="425" when="{{is_ymo}}" width="35" />
             
             <size height="35" left="340" top="416" when="{{is_rush}}" width="35" />
             
@@ -1010,10 +971,9 @@
             
             <size height="36" left="362" top="415" width="30" />
             <align>center</align>
-            <color when="{{is_ymo}}">#ffffff</color>
             <color when="{{is_rush}}">#ffffff</color>
             <color>#000000</color>
-            <font name="font/MatrixBoldSmallCaps.otf" style="normal" size="17" when="{{is_ymo}}" />
+            
             <font name="font/RO rush.otf" style="bold" size="12"
                 when="{{is_rush}}" />
                 
@@ -1047,7 +1007,6 @@
         </text>
         <!-- Pendulum text -->67 383 290
         <text click="cardptext" index="5" keepWord="true" line-space-scale="1" singleline="false">
-            <size height="48" left="32" top="380" when="{{is_ymo}}" width="353" />
             <size height="29.5" left="30" top="390" when="{{is_rush}} and {{pendulum_is_small}}" width="360" />
             <size height="80" left="30" top="339" when="{{is_rush}} and {{pendulum_is_big}}" width="360" />
             <size height="47" left="30" top="373" when="{{is_rush}} and {{pendulum_is_normal}}" width="360" />
@@ -1057,10 +1016,13 @@
             
             <size height="79" left="68" top="386" when="{{pendulum_is_big}}" width="285" />
             
-            <size height="62" left="68" top="386" width="285" />
+            <size height="60" left="68" top="386" width="285" />
             <align>left</align>
             <color>#000000</color>
             <font name="font/MatrixBook.ttf" style="bold" size="12" />
+            <condense>{{condense}}</condense>
+            <minline>{{minline_pendulum}}</minline>
+            <justify>{{justify_pendulum}}</justify>
             <text>{{cardptext}}</text>
             <visible>{{is_pendulum}}</visible>
         </text> 80 475 30
@@ -1068,9 +1030,6 @@
         
         <!-- EFFECT TEXT--> 
         <text click="cardtext" index="2" keepWord="true" line-space-scale="1.0" singleline="false">
-            
-            <size height="101.5" left="30" top="450" when="{{is_ymo}}" width="359" />
-            
             <size height="101.5" left="30" top="465" when="{{is_rush}}" width="359" />
             <size height="60" left="35" top="492" when="{{pendulum_is_big}}" width="353" />
             <size height="110" left="35" top="461" when="{{is_spelltrap}}" width="353" />
@@ -1083,8 +1042,9 @@
                 when="'{{cardtype}}'=='normal'" />
             <font name="font/MatrixBook.ttf" style="bold" size="12" />
             <condense>{{condense}}</condense>
+            <minline>{{minline_effect}}</minline>
+            <justify>{{justify_effect}}</justify>
             <text>{{cardtext}}</text>
-            <visible>{{is_neuron}} == false</visible>
         </text>
         <!-- CARD NUMBER/SET CODE-->
         <text click="cardnum" index="2" singleline="true">
@@ -1134,35 +1094,24 @@
             <src>{{corner}}.png</src>
         </image>
         
-   <!-- Attribute Interface -->
+     <!-- GRADE/ATTRIBUTE -->
         <image click="attribute" index="2">
-            <size height="39" left="352" top="29" width="39" />
-            <src>none</src>
-        </image>
-            
-        
-     <!-- ATTRIBUTE -->
-        <image index="2">
-            <size height="50" left="349" top="23" when="{{is_ymo}}" width="50" />
             <size height="68" left="338" top="15" when="{{is_rush}}" width="68" />
-            <size height="613" left="0" top="0" width="421" />
-<src when="'{{cardtype}}' == 'spell' and {{is_ymo}}">attribute/spell_rd.png</src>
-<src when="'{{cardtype}}' == 'trap' and {{is_ymo}}">attribute/trap_rd.png</src>
+            <size height="39" left="352" top="29" width="39" />
 <src when="'{{cardtype}}' == 'spell' and {{is_rush}}">attribute/spell_rd.png</src>
 <src when="'{{cardtype}}' == 'spell'">attribute/spell_en.png</src>
 <src when="'{{cardtype}}' == 'trap' and {{is_rush}}">attribute/trap_rd.png</src>
-<src when="'{{cardtype}}' == 'trap'">attribute/trap_en.png</src>
-            <src when="{{is_ymo}}">attribute/{{cardattr}}_rd.png</src>
+            <src when="'{{cardtype}}' == 'trap'">attribute/trap_en.png</src>
             <src when="{{is_rush}}">attribute/{{cardattr}}_rd.png</src>
             <src>attribute/{{cardattr}}_en.png</src>
             </image>
             
-    <!-- RESERVE SYMBOL -->
-<image index="5">
-            <size height="613" left="45" top="371" when="{{is_rush}} and {{is_magna}}" width="421" />
-            <size height="613" left="0" top="0" when="{{is_rush}}" width="421" />
-            <size height="613" left="0" top="0" width="421" />
-            <src>reserve/{{reserve}}.png</src>
+    <!-- GRADE SYMBOL -->
+<image index="8">
+            <size height="70" left="337" top="13" when="{{is_rush}}" width="70" />
+            <size height="55" left="344" top="22" width="55" />
+            <src when="'{{cardtype}}' == 'xros'">grade/grade-{{grade}}.png</src>
+            <src>grade/exgrade-{{grade}}.png</src>
         </image>
     <!-- DOUBLE SIDED -->
         <image index="8">
@@ -1170,27 +1119,66 @@
             <size height="47" left="26" top="25" width="47" />
             <src>doublesided/dd_{{doublesided}}.png</src>
         </image>
-
-    <!-- ANIMA FRAME -->
+    <!-- GRADE NUMBER -->
+        <text click="attribute" index="9" singleline="true">
+            <size height="46" left="351" top="22" when="{{is_rush}}" width="48" />
+            <size height="36" left="355" top="29" width="38" />
+            <align>center</align>
+            <color>#ffffff</color>
+            <font name="font/grades.ttf" style="normal" size="25" when="{{is_rush}}" />
+            <font name="font/grades.ttf" style="normal" size="20" />
+            
+            <text>{{gradenum}}</text>
+        </text>
+    <!-- XROS GATE -->
     <image index="1">
             <size height="613" left="0" top="0" width="421" />
-            <src>anima-frame.png</src>
-            <visible>{{is_xros}} and {{is_ymo}} == false and {{is_rush}} == false</visible>
+            <src>gate/{{gate}}.png</src>
+            <visible>{{is_xros}} and {{is_rush}} == false</visible>
         </image>
-
+        
+[•]======[•]
+    <image index="8">
+            <size height="610" left="0" top="0" width="421" />
+            <src>gate/rd{{gate}}.png</src>
+            <visible>{{rd_xros}} and {{is_rush}}</visible>
+        </image>
+        
+        
+        
+        
+        <!-- Gate Name -->
+        <text click="gatetext" index="5" singleline="true" >
+            <size height="35" left="-91.2" top="364" width="600" />
+            <align>center</align>
+            <color>#000000</color>
+            <font name="font/MatrixBoldSmallCaps.otf" style="normal" size="14" />
+            <text>{{gatetext}}</text>
+            <visible>{{is_xros}} and {{is_rush}} == false</visible>
+        </text>
+        
+        [•]======[•]
+        <text click="gatetext" index="11" singleline="true" >
+            <size height="30" left="-91.2" top="416" width="600" />
+            <align>center</align>
+            <color>#ffffff</color>
+            <font name="font/RO rush.otf" style="normal" size="10" />
+            <text>{{gatetext}}</text>
+            <visible>{{rd_xros}} and {{is_rush}}</visible>
+        </text>
 
         
 <!-- Xros text -->
         <text click="xrostext" index="3" keepWord="true" line-space-scale="1" singleline="false" >
             <size height="47" left="30" top="373" when="{{cardtype}} == xros and {{is_rush}}" width="360" />
-
+            <size height="46" left="65" top="410" when="{{xros_small}}" width="290" />
             <size height="78" left="65" top="385" when="{{xros_big}}" width="290" />
             <size height="61.9" left="38" top="388" width="345" />
             <align>left</align>
             <color>#ffffff</color>
             <font name="font/MatrixBook.ttf" style="bold" size="12" />
             <text>{{xrostext}}</text>
-            <visible>{{is_xros}}</visible>
+            <visible>{{is_xros}} and {{is_rush}} == false</visible>
         </text>
         
         [•]======[•]
@@ -1207,171 +1195,48 @@
         </text>
         
 
-    <!-- DYNAMIS FRAME -->
-    <image index="1">
-            <size height="613" left="0" top="4" width="421" />
-            <src>dynamis-frame.png</src>
-            <visible>{{is_dynamis}} and {{is_rush}} == false and {{is_ymo}} == false</visible>
+     <!-- GATE Interface -->
+        <image click="gateframe" index="3" scaleType="FIT_CENTER">
+        <size height="69" left="10" top="386" width="100" />
+        <visible>{{is_xros}}</visible>
         </image>
-    <!-- DYNAMIS Backside -->
-    <image index="20">
+     <!-- left GATE -->
+        <image index="0">
             <size height="613" left="0" top="0" width="421" />
-            <src>bg/dynamisbackframe.png</src>
-            <visible>{{is_dynamisback}} and {{is_rush}} == false and {{is_ymo}} == false</visible>
+            <src>gatecolors/lgate-{{lgate}}.png</src>
+            <visible>{{is_xros}} and {{is_rush}} == false</visible>
         </image>
-
-    <image index="19">
+     <!-- Right GATE  -->
+        <image index="0">
             <size height="613" left="0" top="0" width="421" />
-            <src>bg/card-dynamisback.png</src>
-            <visible>{{is_dynamisback}} and {{is_rush}} == false and {{is_ymo}} == false</visible>
+            <src>gatecolors/rgate-{{Rgate}}.png</src>
+            <visible>{{is_xros}} and {{is_rush}} == false</visible>
         </image>
-    <!-- DYNAMIS Back text -->
-        <text click="rightsidetext" index="26" keepWord="true" line-space-scale="1" singleline="false">
-            <size height="110" left="35" top="461" width="353" />
-            <align>left</align>
-            <color>#000000</color>
-            <font name="font/MatrixBook.ttf" style="bold" size="12" />
-            <text>{{rightsidetext}}</text>
-            <visible>{{is_dynamisback}}</visible>
-        </text>
         
         
-    <!-- YMO -->
-    <image index="-2">
-            <size height="613" left="0" top="0" width="421" />
-            <src>ymostyle/ymostyle-{{cardtype}}.png</src>
-            <visible>{{is_ymo}}</visible>
-        </image>
-
-    <image index="1">
-            <size height="613" left="0" top="0" width="421" />
-            <src>ymostyle/ymolabel/ymolabel-pendulum.png</src>
-            <visible>{{is_ymo}} and {{is_pendulum}}</visible>
+[•]======[•]        
+        <image index="7">
+            <size height="610" left="0" top="0" when="{{cardtype}} == xros" width="421" />
+            <src>gatecolors/rdgate-{{lgate}}.png</src>
+            <visible>{{rd_xros}} and {{is_rush}}</visible>
         </image>
         
-        <image index="3">
-            <size height="613" left="0" top="0" width="421" />
-            <src when="{{is_ymo}} and {{cardtype}} == 'spatial2'">ymostyle/ymo-dnalt.png</src>
-            <src when="{{is_ymo}} and {{cardtype}} == 'spatial'">ymostyle/ymo-dn.png</src>
-            <src when="{{is_ymo}} and {{cardtype}} == 'evolve'">ymostyle/ymo-evfactor.png</src>
-            <src>ymostyle/ymo-level.png</src>
-            <visible>{{is_ymo}} and {{is_spelltrap}} == false</visible>
+         <image index="7">
+            <size height="610" left="270" top="0" when="{{cardtype}} == xros" width="421" />
+            <src>gatecolors/rdgate-{{Rgate}}.png</src>
+            <visible>{{rd_xros}} and {{is_rush}}</visible>
         </image>
-        <!-- ymo Level -->
-        <text click="cardlevel" index="3">
-            <size height="18" left="220" top="559" width="50" />
-         <align>center</align>
-            <color>#000000</color>
-            <font name="font/MatrixBoldSmallCaps.otf" style="normal" size="18.5"/> 
-            <text>{{cardlevel}}</text>
-            <visible>{{is_ymo}} and {{is_spelltrap}} == false</visible>
-        </text>
-        <!-- Pulse ATK -->
-        <text click="pulseatk" index="15">
-            <size height="18" left="125" top="433" width="50" />
-         <align>center</align>
-            <color>#ffffff</color>
-            <font name="font/MatrixBoldSmallCaps.otf" style="normal" size="15"/> 
-            <text>{{pulseatk}}</text>
-            <visible>{{is_ymo}} and {{ymolabelsecondary}} == 'pulse'</visible>
-        </text>
-        <!-- Omega Condition -->
-        <text click="omegacondition" index="5" keepWord="true" line-space-scale="1" singleline="true">
-            <size height="45" left="145" top="436" width="238" />
-            <align>left</align>
-            <color>#ffffff</color>
-            <font name="font/MatrixBook.ttf" style="bold" size="8" />
-            <text>{{omegacondition}}</text>
-            <visible>{{is_ymo}} and {{ymolabelsecondary}} == 'omega'</visible>
-        </text>
         
-    <!-- YMO Primary -->
-    <image index="3">
-            <size height="613" left="0" top="0" width="421" />
-            <src when="{{cardtype}} == 'xros'">ymostyle/ymolabel/ymolabelanima-{{ymolabelprimary}}.png</src>
-            <src>ymostyle/ymolabel/ymolabel-{{ymolabelprimary}}.png</src>
-            <visible>{{is_ymo}} and {{is_neuron}} == false</visible>
-        </image>
-            <!-- YMO Secondary -->
-    <image index="2">
-            <size height="613" left="0" top="-48" when="{{cardtype}} == 'neuron'" width="421" />
-            <size height="613" left="0" top="0" width="421" />
-            <src>ymostyle/ymolabel/ymolabel-{{ymolabelsecondary}}.png</src>
-            <visible>{{is_ymo}} and {{is_neuron}} == false</visible>
-        </image>
-            <!-- YMO Tertiary -->
-    <image index="2">
-            <size height="613" left="0" top="-48" when="{{cardtype}} == 'neuron'" width="421" />
-            <size height="613" left="0" top="0" width="421" />
-            <src when="{{cardtype}} == 'xros'">ymostyle/ymolabel/ymolabelanima-{{ymolabeltertiary}}.png</src>
-            <src>ymostyle/ymolabel/ymolabel-{{ymolabeltertiary}}.png</src>
-            <visible>{{is_ymo}}</visible>
-        </image>
-
-        <!-- YMO race -->
-        <text click="ymoprimaryrace" index="20" singleline="true" >
-            <size height="30" left="24" top="551" width="100" />
-            <align>center</align>
-              <color>#000000</color>
-            <font name="font/ITCSerifSmallCapsBoldMod.otf" style="normal" size="15" />
-            <text>{{ymoprimaryrace}}</text>
-            <visible>{{is_ymo}} and {{is_spelltrap}} == false</visible>
-        </text>
         
-        <text click="ymosecondaryrace" index="20" singleline="true" >
-            <size height="30" left="116" top="551" width="100" />
-            <align>center</align>
-              <color>#000000</color>
-            <font name="font/ITCSerifSmallCapsBoldMod.otf" style="normal" size="15" />
-            <text>{{ymosecondaryrace}}</text>
-            <visible>{{is_ymo}} and {{is_spelltrap}} == false</visible>
-        </text>
-    <!-- YMO Interface  -->
-    <image click="ymointerface" index="10">
-            <size height="36" left="50" top="370" when="{{is_neuron}}" width="130" />
-            <size height="36" left="50" top="420" width="130" />
-            <src>none.png</src>
-            <visible>{{is_ymo}}</visible>
+[•]======[•]        
+        <image index="2">
+            <size height="680" left="0" top="-42" width="421" />
+            <src>gate/gate-{{gatename}}.png</src>
+            <visible>{{is_xros}} and {{is_rush}} == false</visible>
         </image>
-        <!-- Pulse text -->
-        <text click="pulsetext" index="5" keepWord="true" line-space-scale="1" singleline="false">
-            <size height="48" left="32" top="380" width="353" />
-            <align>left</align>
-            <color>#000000</color>
-            <font name="font/MatrixBook.ttf" style="bold" size="12" />
-            <text>{{pulsetext}}</text>
-            <visible>{{is_ymo}} and {{cardtype}} == 'pulse'</visible>
-        </text>
-        <!-- Synapse text -->
-        <text click="synapsetext1" index="5" keepWord="true" line-space-scale="1" singleline="false">
-            <size height="45" left="43" top="403" width="345" />
-            <align>left</align>
-            <color>#000000</color>
-            <font name="font/MatrixBook.ttf" style="bold" size="12" />
-            <text>{{synapsetext1}}</text>
-            <visible>{{is_ymo}} and {{is_neuron}}</visible>
-        </text>
-        <text click="synapsetext2" index="5" keepWord="true" line-space-scale="1" singleline="false">
-            <size height="45" left="43" top="457" width="345" />
-            <align>left</align>
-            <color>#000000</color>
-            <font name="font/MatrixBook.ttf" style="bold" size="12" />
-            <text>{{synapsetext2}}</text>
-            <visible>{{is_ymo}} and {{is_neuron}}</visible>
-        </text>
-        <text click="synapsetext3" index="5" keepWord="true" line-space-scale="1" singleline="false">
-            <size height="45" left="43" top="510" width="345" />
-            <align>left</align>
-            <color>#000000</color>
-            <font name="font/MatrixBook.ttf" style="bold" size="12" />
-            <text>{{synapsetext3}}</text>
-            <visible>{{is_ymo}} and {{is_neuron}}</visible>
-        </text>
-
 
     <!-- Evolve Factor Interface  -->
     <image click="evolvefactor" index="10">
-            <size height="36" left="150" top="80" when="{{is_ymo}}" width="130" />
             <size height="130" left="20" top="80" when="{{is_rush}}" width="36" />
             <size height="36" left="150" top="100" when="{{is_pendulum}}" width="130" />
             <size height="36" left="150" top="420" width="130" />
@@ -1383,11 +1248,9 @@
             
     <!-- Evolve Factor Slots  -->
     <image index="5">
-            <size height="613" left="0" top="0" when="{{is_ymo}}" width="421" />
             <size height="613" left="0" top="0" when="{{is_rush}}" width="421" />
             <size height="613" left="0" top="-328" when="{{is_pendulum}}" width="421" />
             <size height="613" left="0" top="0" width="421" />
-            <src when="{{is_ymo}}">evfactor/ymoevfactor-{{evolvefactorslots}}.png</src>
             <src when="{{is_rush}}">evfactor/rdevfactor-{{evolvefactorslots}}.png</src>
             <src>evfactor/evfactor-{{evolvefactorslots}}.png</src>
             <visible>{{linkborderon}} == false and {{cardtype}} == 'evolve'</visible>
@@ -1395,52 +1258,42 @@
         
     <!-- Evolve Factor Slot 1 -->
     <image index="10">
-            <size height="613" left="-65.5" top="0" when="{{is_ymo}}" width="421" />
             <size height="613" left="-170.5" top="-352.5" when="{{is_rush}}" width="421" />
-            <size height="613" left="-87" top="-328" when="{{is_pendulum}}" width="421" />
-            <size height="613" left="-87" top="0" width="421" />
-            <src when="{{is_ymo}}">evfactor/ymoevfactor-{{evfactorslot1}}.png</src>
+            <size height="613" left="-66" top="-328" when="{{is_pendulum}}" width="421" />
+            <size height="613" left="-66" top="0" width="421" />
             <src>evfactor/evfactor-{{evfactorslot1}}.png</src>
             <visible>{{linkborderon}} == false and {{cardtype}} == 'evolve'</visible>
         </image>
     <!-- Evolve Factor Slot 2 -->
     <image index="10">
-            <size height="613" left="-32" top="0" when="{{is_ymo}}" width="421" />
             <size height="613" left="-170.5" top="-319.5" when="{{is_rush}}" width="421" />
-            <size height="613" left="-43" top="-328" when="{{is_pendulum}}" width="421" />
-            <size height="613" left="-43" top="0" width="421" />
-            <src when="{{is_ymo}}">evfactor/ymoevfactor-{{evfactorslot2}}.png</src>
+            <size height="613" left="-33" top="-328" when="{{is_pendulum}}" width="421" />
+            <size height="613" left="-33" top="0" width="421" />
             <src>evfactor/evfactor-{{evfactorslot2}}.png</src>
             <visible>{{linkborderon}} == false and {{cardtype}} == 'evolve'</visible>
         </image>
 
     <!-- Evolve Factor Slot 3 -->
     <image index="10">
-            <size height="613" left="0" top="0" when="{{is_ymo}}" width="421" />
             <size height="613" left="-170.5" top="-287" when="{{is_rush}}" width="421" />
             <size height="613" left="0" top="-328" when="{{is_pendulum}}" width="421" />
             <size height="613" left="0" top="0" width="421" />
-            <src when="{{is_ymo}}">evfactor/ymoevfactor-{{evfactorslot3}}.png</src>
             <src>evfactor/evfactor-{{evfactorslot3}}.png</src>
             <visible>{{linkborderon}} == false and {{cardtype}} == 'evolve'</visible>
         </image>
     <!-- Evolve Factor Slot 4 -->
     <image index="10">
-            <size height="613" left="33.5" top="0" when="{{is_ymo}}" width="421" />
             <size height="613" left="-170.5" top="-254" when="{{is_rush}}" width="421" />
-            <size height="613" left="43" top="-328" when="{{is_pendulum}}" width="421" />
-            <size height="613" left="44" top="0" width="421" />
-            <src when="{{is_ymo}}">evfactor/ymoevfactor-{{evfactorslot4}}.png</src>
+            <size height="613" left="33" top="-328" when="{{is_pendulum}}" width="421" />
+            <size height="613" left="33" top="0" width="421" />
             <src>evfactor/evfactor-{{evfactorslot4}}.png</src>
             <visible>{{linkborderon}} == false and {{cardtype}} == 'evolve'</visible>
         </image>
     <!-- Evolve Factor Slot 5 -->
     <image index="10">
-            <size height="613" left="66.5" top="0" when="{{is_ymo}}" width="421" />
             <size height="613" left="-170.5" top="-221" when="{{is_rush}}" width="421" />
-            <size height="613" left="88" top="-328" when="{{is_pendulum}}" width="421" />
-            <size height="613" left="88" top="0" width="421" />
-            <src when="{{is_ymo}}">evfactor/ymoevfactor-{{evfactorslot5}}.png</src>
+            <size height="613" left="66" top="-328" when="{{is_pendulum}}" width="421" />
+            <size height="613" left="66" top="0" width="421" />
             <src>evfactor/evfactor-{{evfactorslot5}}.png</src>
             <visible>{{linkborderon}} == false and {{cardtype}} == 'evolve'</visible>
         </image>
@@ -1464,11 +1317,10 @@
     <!-- extended type -->
     <image index="1">
             <size height="613" left="0" top="0" width="421" />
-            <src>extended/ex_{{image_type}}.png</src>
+            <src>extended/ex_{{extended}}.png</src>
             <visible>{{card_is_ex}} and {{is_pendulum}} == false</visible>
         </image>
-        
-        
+
     <!-- Link marker -->
         <image index="5">
             <size height="614" left="0" top="0" width="421" />

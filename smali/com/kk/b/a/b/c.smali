@@ -22,6 +22,18 @@
     .end annotation
 .end field
 
+.field protected minline:[Lcom/kk/b/c/h;
+    .annotation runtime La/a/a/b;
+        a = "minline"
+    .end annotation
+.end field
+
+.field protected justify:[Lcom/kk/b/c/h;
+    .annotation runtime La/a/a/b;
+        a = "justify"
+    .end annotation
+.end field
+
 .field protected color:[Lcom/kk/b/c/h;
     .annotation runtime La/a/a/b;
         a = "color"
@@ -106,6 +118,22 @@
     .locals 1
 
     iget-object v0, p0, Lcom/kk/b/a/b/c;->condense:[Lcom/kk/b/c/h;
+
+    return-object v0
+.end method
+
+.method public getMinLine()[Lcom/kk/b/c/h;
+    .locals 1
+
+    iget-object v0, p0, Lcom/kk/b/a/b/c;->minline:[Lcom/kk/b/c/h;
+
+    return-object v0
+.end method
+
+.method public getJustify()[Lcom/kk/b/c/h;
+    .locals 1
+
+    iget-object v0, p0, Lcom/kk/b/a/b/c;->justify:[Lcom/kk/b/c/h;
 
     return-object v0
 .end method

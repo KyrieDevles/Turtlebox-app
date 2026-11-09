@@ -34,6 +34,10 @@
 
 .field public condense:F
 
+.field public minline:F
+
+.field public justify:F
+
 
 # direct methods
 .method public constructor <init>()V

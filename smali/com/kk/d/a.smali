@@ -13,6 +13,12 @@
 # instance fields
 .field protected d:Z
 
+.field public condenseFloor:F
+
+.field public minLines:F
+
+.field public justifyRatio:F
+
 .field protected e:Z
 
 .field protected f:F
@@ -832,6 +838,58 @@
 
     .line 258
     :goto_5
+    if-nez v1, :cond_jr_go
+
+    # ---- PATCH: Justify Ratio - justify a last line when its gaps are small enough ----
+    move-object/from16 v0, p0
+
+    iget v15, v0, Lcom/kk/d/a;->justifyRatio:F
+
+    const/4 v6, 0x0
+
+    cmpl-float v6, v15, v6
+
+    if-lez v6, :cond_jr_go
+
+    invoke-virtual {v0, v2}, Lcom/kk/d/a;->a(Ljava/lang/CharSequence;)I
+
+    move-result v6
+
+    if-lez v6, :cond_jr_go
+
+    cmpl-float v7, v8, v3
+
+    if-lez v7, :cond_jr_go
+
+    sub-float v7, v8, v3
+
+    int-to-float v6, v6
+
+    div-float/2addr v7, v6
+
+    const-string v6, " "
+
+    invoke-virtual {v11, v6}, Landroid/text/TextPaint;->measureText(Ljava/lang/String;)F
+
+    move-result v6
+
+    const v16, 0x3ee66666    # 0.45f of a space width at ratio 100
+
+    mul-float v6, v6, v16
+
+    mul-float v6, v6, v15
+
+    const/high16 v16, 0x42c80000    # 100.0f
+
+    div-float v6, v6, v16
+
+    cmpl-float v6, v7, v6
+
+    if-gtz v6, :cond_jr_go
+
+    const/4 v1, 0x1
+
+    :cond_jr_go
     if-eqz v1, :cond_8
 
     cmpl-float v1, v8, v3

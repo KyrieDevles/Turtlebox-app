@@ -648,18 +648,18 @@
 
     # ---- PATCH: condense-first scaling ----
     # Phase 1: largest font size that fits when text is condensed to the floor ratio
-    # floor = view.condenseFloor from the <condense> XML option; unset (<= 0) -> 0.70; >= 1 -> condensing off
-    const v1, 0x3f333333    # 0.70f default
+    # floor = view.condenseFloor from <condense>; unset (<= 0) -> 0.60; >= 1 -> condensing off
+    const v1, 0x3f19999a    # 0.60f default
 
     iget-object v2, p0, Lcom/kk/d/c;->a:Lcom/kk/d/e;
 
-    instance-of v3, v2, Lcom/kk/d/d;
+    instance-of v3, v2, Lcom/kk/d/a;
 
     if-eqz v3, :cond_nofloor
 
-    check-cast v2, Lcom/kk/d/d;
+    check-cast v2, Lcom/kk/d/a;
 
-    iget v2, v2, Lcom/kk/d/d;->condenseFloor:F
+    iget v2, v2, Lcom/kk/d/a;->condenseFloor:F
 
     const/4 v3, 0x0
 
@@ -679,6 +679,49 @@
     const/high16 v1, 0x3f800000    # clamp to 1.0
 
     :cond_floor_ok
+    # Minimum Lines: cap the font size so at least N lines fit in the text box (height * 0.9 / N)
+    iget-object v2, p0, Lcom/kk/d/c;->a:Lcom/kk/d/e;
+
+    instance-of v3, v2, Lcom/kk/d/a;
+
+    if-eqz v3, :cond_nomin
+
+    check-cast v2, Lcom/kk/d/a;
+
+    iget v3, v2, Lcom/kk/d/a;->minLines:F
+
+    const/4 v4, 0x0
+
+    cmpl-float v4, v3, v4
+
+    if-lez v4, :cond_nomin
+
+    invoke-virtual {v2}, Lcom/kk/d/a;->getTextHeight()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    const v5, 0x3f666666    # 0.9f
+
+    mul-float v4, v4, v5
+
+    div-float/2addr v4, v3
+
+    cmpg-float v5, v4, p4
+
+    if-gez v5, :cond_cap_ok
+
+    move v4, p4
+
+    :cond_cap_ok
+    cmpg-float v5, v4, p3
+
+    if-gez v5, :cond_nomin
+
+    move p3, v4
+
+    :cond_nomin
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTextScaleX(F)V
 
