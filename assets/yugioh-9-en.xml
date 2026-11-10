@@ -502,17 +502,39 @@
     <data name="minline_xros" default="0" desc="Minimum Lines - Xros Effect" type="text" />
     <data name="justify_xros" default="0" desc="Justify Last Line">
         <item name="off" value="0" />
+        <item name="light" value="100" />
+        <item name="normal" value="200" />
+        <item name="full" value="400" />
+    </data>
     <data name="maxsize_xros" default="100" desc="Max Font % (100 = normal)" type="text" />
     <data name="minsize_xros" default="0" desc="Min Font % (0 = auto)" type="text" />
     <data name="linespace_xros" default="0" desc="Line Spacing">
         <item name="default" value="0" />
+        <item name="tight (0.9)" value="0.9" />
+        <item name="loose (1.1)" value="1.1" />
+        <item name="looser (1.2)" value="1.2" />
+    </data>
     <data name="letterspace_xros" default="0" desc="Letter Spacing (em, e.g. 0.02)" type="text" />
     <data name="indent_xros" default="0" desc="First-line Indent (spaces)">
         <item name="none" value="0" />
+        <item name="1" value="1" />
+        <item name="2" value="2" />
+        <item name="3" value="3" />
+    </data>
     <data name="valign_xros" default="0" desc="Vertical Align">
         <item name="top" value="0" />
+        <item name="center" value="0.5" />
+        <item name="bottom" value="1" />
+    </data>
     <data name="fitmode_xros" default="1" desc="Fit Priority">
         <item name="squeeze first (uses Condense %)" value="1" />
+        <item name="shrink first" value="2" />
+        <item name="balanced" value="3" />
+        <item name="light squeeze (85%)" value="4" />
+        <item name="medium squeeze (70%)" value="5" />
+        <item name="strong squeeze (55%)" value="6" />
+        <item name="keep size, squeeze only" value="7" />
+    </data>
 
     <!-- Menu groups (opened by tapping the effect / pendulum effect text) -->
     <data name="cardtextmenu" desc="Effect Text" type="multi_select">
