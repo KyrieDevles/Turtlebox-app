@@ -236,6 +236,15 @@
 
     .line 265
     :cond_1
+    # ---- PATCH: wrap the option list in a ScrollView so long menus scroll ----
+    new-instance v0, Landroid/widget/ScrollView;
+
+    invoke-direct {v0, p0}, Landroid/widget/ScrollView;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v0, v3}, Landroid/widget/ScrollView;->addView(Landroid/view/View;)V
+
+    move-object v3, v0
+
     const/4 v2, 0x0
 
     move-object v0, p0
