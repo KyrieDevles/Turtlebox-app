@@ -648,8 +648,8 @@
 
     # ---- PATCH: condense-first scaling ----
     # Phase 1: largest font size that fits when text is condensed to the floor ratio
-    # floor = view.condenseFloor from <condense>; unset (<= 0) -> 0.60; >= 1 -> condensing off
-    const v1, 0x3f19999a    # 0.60f default
+    # floor = view.condenseFloor from <condense>; unset (<= 0) -> 1.0 (no squeezing, original behaviour)
+    const v1, 0x3f800000    # 1.0f default
 
     iget-object v2, p0, Lcom/kk/d/c;->a:Lcom/kk/d/e;
 
@@ -703,7 +703,10 @@
     :cond_floor_ok
     move v8, v1
 
-    # ---- Fit priority: 1 = squeeze first (default), 2 = shrink first, 3 = balanced ----
+    # ---- Fit priority: 1 squeeze (Condense %), 2 shrink first, 3 balanced,
+    #      4 light / 5 medium / 6 strong squeeze presets, 7 keep size ----
+    const/4 v7, 0x0
+
     iget-object v2, p0, Lcom/kk/d/c;->a:Lcom/kk/d/e;
 
     instance-of v3, v2, Lcom/kk/d/a;
@@ -714,11 +717,26 @@
 
     iget v3, v2, Lcom/kk/d/a;->fitMode:F
 
-    const/high16 v4, 0x40200000    # 2.5f
+    const/high16 v4, 0x3f000000    # 0.5f
 
-    cmpl-float v4, v3, v4
+    add-float/2addr v3, v4
 
-    if-ltz v4, :cond_m_lt25
+    float-to-int v3, v3
+
+    move v7, v3
+
+    const/4 v4, 0x2
+
+    if-ne v3, v4, :cond_m3
+
+    const/high16 v1, 0x3f800000    # shrink first: phase 1 at normal width
+
+    goto :cond_nomode
+
+    :cond_m3
+    const/4 v4, 0x3
+
+    if-ne v3, v4, :cond_m4
 
     const/high16 v4, 0x3f800000    # 1.0f
 
@@ -732,14 +750,36 @@
 
     goto :cond_nomode
 
-    :cond_m_lt25
-    const/high16 v4, 0x3fc00000    # 1.5f
+    :cond_m4
+    const/4 v4, 0x4
 
-    cmpl-float v4, v3, v4
+    if-ne v3, v4, :cond_m5
 
-    if-ltz v4, :cond_nomode
+    const v1, 0x3f59999a    # 0.85f
 
-    const/high16 v1, 0x3f800000    # shrink first: phase 1 at normal width
+    move v8, v1
+
+    goto :cond_nomode
+
+    :cond_m5
+    const/4 v4, 0x5
+
+    if-ne v3, v4, :cond_m6
+
+    const v1, 0x3f333333    # 0.70f
+
+    move v8, v1
+
+    goto :cond_nomode
+
+    :cond_m6
+    const/4 v4, 0x6
+
+    if-ne v3, v4, :cond_nomode
+
+    const v1, 0x3f0ccccd    # 0.55f
+
+    move v8, v1
 
     :cond_nomode
     # ---- Font size range, in percent of the configured size (0 = unchanged) ----
@@ -846,6 +886,14 @@
     move p3, v4
 
     :cond_nomin
+    # Fit priority 7 (keep size): never shrink the font, only squeeze
+    const/4 v4, 0x7
+
+    if-ne v7, v4, :cond_nokeep
+
+    move p4, p3
+
+    :cond_nokeep
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTextScaleX(F)V
 

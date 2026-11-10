@@ -425,11 +425,11 @@
     
     
     <!-- Paragraph Style (like ygocarder): Condense level 5-1, Minimum Lines, Justify Ratio -->
-    <data name="condense" default="60" desc="Condense % (narrowest text width, 100 = off)" type="text" />
+    <data name="condense" default="100" desc="Condense % (narrowest text width, 100 = off, the original look)" type="text" />
     <data name="minline_effect" default="0" desc="Minimum Lines - Effect" type="text" />
     <data name="minline_pendulum" default="0" desc="Minimum Lines - Pendulum Effect" type="text" />
-    <data name="justify_effect" default="100" desc="Justify Ratio % - Effect" type="text" />
-    <data name="justify_pendulum" default="100" desc="Justify Ratio % - Pendulum Effect" type="text" />
+    <data name="justify_effect" default="0" desc="Justify Ratio % (0 = off) - Effect" type="text" />
+    <data name="justify_pendulum" default="0" desc="Justify Ratio % (0 = off) - Pendulum Effect" type="text" />
     <data name="maxsize_effect" default="100" desc="Max Font Size % - Effect" type="text" />
     <data name="minsize_effect" default="0" desc="Min Font Size % (0 = auto) - Effect" type="text" />
     <data name="linespace_effect" default="0" desc="Line Spacing x (0 = default, e.g. 1.1) - Effect" type="text" />
@@ -441,9 +441,13 @@
         <item name="bottom" value="1" />
     </data>
     <data name="fitmode_effect" default="1" desc="Fit Priority - Effect">
-        <item name="squeeze first" value="1" />
+        <item name="squeeze first (uses Condense %)" value="1" />
         <item name="shrink first" value="2" />
         <item name="balanced" value="3" />
+        <item name="light squeeze (85%)" value="4" />
+        <item name="medium squeeze (70%)" value="5" />
+        <item name="strong squeeze (55%)" value="6" />
+        <item name="keep size, squeeze only" value="7" />
     </data>
     <data name="maxsize_pendulum" default="100" desc="Max Font Size % - Pendulum Effect" type="text" />
     <data name="minsize_pendulum" default="0" desc="Min Font Size % (0 = auto) - Pendulum Effect" type="text" />
@@ -456,9 +460,13 @@
         <item name="bottom" value="1" />
     </data>
     <data name="fitmode_pendulum" default="1" desc="Fit Priority - Pendulum Effect">
-        <item name="squeeze first" value="1" />
+        <item name="squeeze first (uses Condense %)" value="1" />
         <item name="shrink first" value="2" />
         <item name="balanced" value="3" />
+        <item name="light squeeze (85%)" value="4" />
+        <item name="medium squeeze (70%)" value="5" />
+        <item name="strong squeeze (55%)" value="6" />
+        <item name="keep size, squeeze only" value="7" />
     </data>
 
     <!-- Menu groups (opened by tapping the effect / pendulum effect text) -->
