@@ -499,6 +499,21 @@
         <item name="keep size, squeeze only" value="7" />
     </data>
 
+    <data name="minline_xros" default="0" desc="Minimum Lines - Xros Effect" type="text" />
+    <data name="justify_xros" default="0" desc="Justify Last Line">
+        <item name="off" value="0" />
+    <data name="maxsize_xros" default="100" desc="Max Font % (100 = normal)" type="text" />
+    <data name="minsize_xros" default="0" desc="Min Font % (0 = auto)" type="text" />
+    <data name="linespace_xros" default="0" desc="Line Spacing">
+        <item name="default" value="0" />
+    <data name="letterspace_xros" default="0" desc="Letter Spacing (em, e.g. 0.02)" type="text" />
+    <data name="indent_xros" default="0" desc="First-line Indent (spaces)">
+        <item name="none" value="0" />
+    <data name="valign_xros" default="0" desc="Vertical Align">
+        <item name="top" value="0" />
+    <data name="fitmode_xros" default="1" desc="Fit Priority">
+        <item name="squeeze first (uses Condense %)" value="1" />
+
     <!-- Menu groups (opened by tapping the effect / pendulum effect text) -->
     <data name="cardtextmenu" desc="Effect Text" type="multi_select">
         <item name="cardtext" value="cardtext" />
@@ -521,6 +536,19 @@
         <item name="condense" value="condense" />
         <item name="maxsize_pendulum" value="maxsize_pendulum" />
         <item name="minsize_pendulum" value="minsize_pendulum" />
+    </data>
+
+    <data name="xrostextmenu" desc="Anima / Xros Effect" type="multi_select">
+        <item name="xrostext" value="xrostext" />
+        <item name="fitmode_xros" value="fitmode_xros" />
+        <item name="justify_xros" value="justify_xros" />
+        <item name="valign_xros" value="valign_xros" />
+        <item name="linespace_xros" value="linespace_xros" />
+        <item name="condense" value="condense" />
+        <item name="maxsize_xros" value="maxsize_xros" />
+        <item name="minsize_xros" value="minsize_xros" />
+        <item name="letterspace_xros" value="letterspace_xros" />
+        <item name="indent_xros" value="indent_xros" />
     </data>
 
     <data name="cardstyles" default="series 10" desc="Card Template Styles">
@@ -1290,7 +1318,7 @@
 
         
 <!-- Xros text -->
-        <text click="xrostext" index="3" keepWord="true" line-space-scale="1" singleline="false" >
+        <text click="xrostextmenu" index="3" keepWord="true" line-space-scale="1" singleline="false" >
             <size height="47" left="30" top="373" when="{{cardtype}} == xros and {{is_rush}}" width="360" />
 
             <size height="78" left="65" top="385" when="{{xros_big}}" width="290" />
@@ -1298,12 +1326,22 @@
             <align>left</align>
             <color>#ffffff</color>
             <font name="font/MatrixBook.ttf" style="bold" size="12" />
+            <condense>{{condense}}</condense>
+            <minline>{{minline_xros}}</minline>
+            <justify>{{justify_xros}}</justify>
+            <maxsize>{{maxsize_xros}}</maxsize>
+            <minsize>{{minsize_xros}}</minsize>
+            <linespace>{{linespace_xros}}</linespace>
+            <letterspace>{{letterspace_xros}}</letterspace>
+            <indent>{{indent_xros}}</indent>
+            <valign>{{valign_xros}}</valign>
+            <fitmode>{{fitmode_xros}}</fitmode>
             <text>{{xrostext}}</text>
             <visible>{{is_xros}}</visible>
         </text>
         
         [•]======[•]
-        <text click="xrostext" index="1" keepWord="true" line-space-scale="1" singleline="false" >
+        <text click="xrostextmenu" index="1" keepWord="true" line-space-scale="1" singleline="false" >
             <size height="47" left="30" top="373" when="{{cardtype}} == xros and {{is_rush}}" width="360" />
             <size height="46" left="65" top="410" when="{{xros_small}}" width="290" />
             <size height="78" left="65" top="385" when="{{xros_big}}" width="290" />
@@ -1311,6 +1349,16 @@
             <align>left</align>
             <color>#ffffff</color>
             <font name="font/MatrixBook.ttf" style="Bold" size="13" />
+            <condense>{{condense}}</condense>
+            <minline>{{minline_xros}}</minline>
+            <justify>{{justify_xros}}</justify>
+            <maxsize>{{maxsize_xros}}</maxsize>
+            <minsize>{{minsize_xros}}</minsize>
+            <linespace>{{linespace_xros}}</linespace>
+            <letterspace>{{letterspace_xros}}</letterspace>
+            <indent>{{indent_xros}}</indent>
+            <valign>{{valign_xros}}</valign>
+            <fitmode>{{fitmode_xros}}</fitmode>
             <text>{{xrostext}}</text>
             <visible>{{rd_xros}} and {{is_rush}}</visible>
         </text>
