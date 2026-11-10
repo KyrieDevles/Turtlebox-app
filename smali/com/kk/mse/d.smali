@@ -61,9 +61,13 @@
     if-nez p2, :cond_0
 
     .line 230
-    const/4 v1, 0x5
+    const/4 v1, 0x6
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setMinLines(I)V
+
+    const/16 v1, 0x10
+
+    invoke-virtual {v0, v1, v1, v1, v1}, Landroid/widget/EditText;->setPadding(IIII)V
 
     .line 235
     :goto_0
@@ -786,7 +790,18 @@
 
     .line 193
     :cond_2
-    const/4 v0, 0x1
+    # PATCH: fields whose name ends in "text" (effect / pendulum / xros text) are multi-line and grow
+    invoke-virtual {v6}, Lcom/kk/b/a/b;->a()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v7, "text"
+
+    invoke-virtual {v0, v7}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
 
     invoke-direct {p0, v5, v0}, Lcom/kk/mse/d;->a(Ljava/lang/String;Z)Landroid/widget/EditText;
 
