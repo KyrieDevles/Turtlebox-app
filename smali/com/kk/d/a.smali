@@ -27,6 +27,10 @@
 
 .field public fitMode:F
 
+.field public jsBase:F
+
+.field public jsOn:F
+
 .field protected e:Z
 
 .field protected f:F
@@ -602,6 +606,8 @@
 
     .line 280
     :cond_1
+    invoke-direct/range {p0 .. p0}, Lcom/kk/d/a;->jsRestore()V
+
     return-void
 
     .line 217
@@ -684,6 +690,8 @@
 
     :goto_2
     if-ge v10, v13, :cond_1
+
+    invoke-direct/range {p0 .. p0}, Lcom/kk/d/a;->jsRestore()V
 
     .line 231
     invoke-virtual {v9, v10}, Landroid/text/Layout;->getLineStart(I)I
@@ -941,6 +949,57 @@
     if-gtz v6, :cond_jr_go
 
     const/4 v1, 0x1
+
+    # ---- PATCH: spread the extra width over letter spacing first (up to 0.08em), spaces take the rest ----
+    invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
+
+    move-result v6
+
+    if-lez v6, :cond_jr_go
+
+    sub-float v7, v8, v3
+
+    const/4 v15, 0x0
+
+    cmpl-float v15, v7, v15
+
+    if-lez v15, :cond_jr_go
+
+    int-to-float v6, v6
+
+    div-float v15, v7, v6
+
+    invoke-virtual {v11}, Landroid/text/TextPaint;->getTextSize()F
+
+    move-result v16
+
+    div-float v15, v15, v16
+
+    const v7, 0x3da3d70a    # 0.08f
+
+    invoke-static {v15, v7}, Ljava/lang/Math;->min(FF)F
+
+    move-result v15
+
+    mul-float v16, v16, v15
+
+    mul-float v16, v16, v6
+
+    add-float v3, v3, v16
+
+    invoke-virtual {v11}, Landroid/text/TextPaint;->getLetterSpacing()F
+
+    move-result v7
+
+    iput v7, v0, Lcom/kk/d/a;->jsBase:F
+
+    add-float/2addr v7, v15
+
+    invoke-virtual {v11, v7}, Landroid/text/TextPaint;->setLetterSpacing(F)V
+
+    const/high16 v7, 0x3f800000    # 1.0f
+
+    iput v7, v0, Lcom/kk/d/a;->jsOn:F
 
     :cond_jr_go
     if-eqz v1, :cond_8
@@ -1220,5 +1279,32 @@
     iput-boolean p1, p0, Lcom/kk/d/a;->d:Z
 
     .line 160
+    return-void
+.end method
+
+.method private jsRestore()V
+    .locals 2
+
+    iget v0, p0, Lcom/kk/d/a;->jsOn:F
+
+    const/4 v1, 0x0
+
+    cmpl-float v0, v0, v1
+
+    if-lez v0, :cond_end
+
+    invoke-virtual {p0}, Lcom/kk/d/a;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/kk/d/a;->jsBase:F
+
+    invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setLetterSpacing(F)V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/kk/d/a;->jsOn:F
+
+    :cond_end
     return-void
 .end method
