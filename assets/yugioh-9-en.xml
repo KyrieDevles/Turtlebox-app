@@ -561,6 +561,8 @@
         <item name="condense" value="condense" />
         <item name="maxsize_pendulum" value="maxsize_pendulum" />
         <item name="minsize_pendulum" value="minsize_pendulum" />
+        <item name="letterspace_pendulum" value="letterspace_pendulum" />
+        <item name="indent_pendulum" value="indent_pendulum" />
     </data>
 
     <data name="xrostextmenu" desc="Anima / Xros Effect" type="multi_select">
