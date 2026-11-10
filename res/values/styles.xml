@@ -480,7 +480,32 @@
         <item name="android:windowEnterAnimation">@anim/design_bottom_sheet_slide_in</item>
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
-    <style name="AppTheme" parent="@android:style/Theme.Holo" />
+    <style name="AppTheme" parent="@android:style/Theme.Holo">
+        <item name="android:actionBarStyle">@style/HotActionBar</item>
+        <item name="android:actionOverflowButtonStyle">@style/HotOverflowButton</item>
+        <item name="android:popupMenuStyle">@style/HotPopupMenu</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/HotPopupText</item>
+        <item name="android:textAppearanceSmallPopupMenu">@style/HotPopupText</item>
+        <item name="android:actionMenuTextColor">#ffff6ec7</item>
+    </style>
+    <style name="HotActionBar" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/bg_hot_actionbar</item>
+        <item name="android:backgroundStacked">@drawable/bg_hot_actionbar</item>
+        <item name="android:backgroundSplit">@drawable/bg_hot_actionbar</item>
+        <item name="android:titleTextStyle">@style/HotActionBarTitle</item>
+    </style>
+    <style name="HotActionBarTitle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">#ffff4da6</item>
+    </style>
+    <style name="HotOverflowButton" parent="@android:style/Widget.Holo.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_hot_overflow</item>
+    </style>
+    <style name="HotPopupMenu" parent="@android:style/Widget.Holo.PopupMenu">
+        <item name="android:popupBackground">@drawable/bg_hot_popup</item>
+    </style>
+    <style name="HotPopupText" parent="@android:style/TextAppearance.Holo.Widget.PopupMenu.Large">
+        <item name="android:textColor">#ffff6ec7</item>
+    </style>
     <style name="AppTheme.NoActionBar" parent="@style/AppTheme">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
