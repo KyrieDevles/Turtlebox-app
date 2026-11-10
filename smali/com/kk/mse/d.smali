@@ -672,7 +672,7 @@
 .end method
 
 .method protected b(Lcom/kk/b/c;Lcom/kk/b/a/b;)V
-    .locals 8
+    .locals 9
 
     .prologue
     .line 176
@@ -730,6 +730,13 @@
     invoke-virtual {v0}, Lcom/kk/b/c/g;->a()Ljava/lang/String;
 
     move-result-object v0
+
+    # PATCH: remember whether this option is a free-text field (name ends in "text")
+    const-string v8, "text"
+
+    invoke-virtual {v0, v8}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v8
 
     invoke-virtual {p1, v0}, Lcom/kk/b/c;->d(Ljava/lang/String;)Lcom/kk/b/a/b;
 
@@ -790,18 +797,7 @@
 
     .line 193
     :cond_2
-    # PATCH: fields whose name ends in "text" (effect / pendulum / xros text) are multi-line and grow
-    invoke-virtual {v6}, Lcom/kk/b/a/b;->a()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v7, "text"
-
-    invoke-virtual {v0, v7}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    xor-int/lit8 v0, v0, 0x1
+    xor-int/lit8 v0, v8, 0x1
 
     invoke-direct {p0, v5, v0}, Lcom/kk/mse/d;->a(Ljava/lang/String;Z)Landroid/widget/EditText;
 
