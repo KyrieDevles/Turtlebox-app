@@ -679,6 +679,12 @@
 
     .line 229
     :goto_1
+    move-object/from16 v1, p0
+
+    invoke-static {v1, v9}, Lcom/kk/d/a;->balanceLayout(Lcom/kk/d/a;Landroid/text/Layout;)Landroid/text/Layout;
+
+    move-result-object v9
+
     invoke-virtual {v9}, Landroid/text/Layout;->getLineCount()I
 
     move-result v13
@@ -1307,4 +1313,104 @@
 
     :cond_end
     return-void
+.end method
+
+# Balanced justify (ratio >= 500): re-wrap at the narrowest width that keeps the same line count,
+# so words spread evenly over all lines and the last line is as full as possible.
+.method private static balanceLayout(Lcom/kk/d/a;Landroid/text/Layout;)Landroid/text/Layout;
+    .locals 14
+
+    move-object/from16 v9, p0
+
+    iget v0, v9, Lcom/kk/d/a;->justifyRatio:F
+
+    const/high16 v1, 0x43fa0000    # 500.0f
+
+    cmpg-float v0, v0, v1
+
+    if-ltz v0, :cond_ret
+
+    invoke-virtual/range {p1 .. p1}, Landroid/text/Layout;->getLineCount()I
+
+    move-result v8
+
+    const/4 v0, 0x2
+
+    if-lt v8, v0, :cond_ret
+
+    invoke-static {v9}, Lcom/kk/d/c;->a(Landroid/widget/TextView;)I
+
+    move-result v11
+
+    int-to-float v0, v11
+
+    const v1, 0x3f4ccccd    # 0.8f
+
+    mul-float/2addr v0, v1
+
+    float-to-int v10, v0
+
+    const/4 v12, 0x0
+
+    :loop
+    if-ge v10, v11, :done
+
+    add-int v0, v10, v11
+
+    shr-int/lit8 v13, v0, 0x1
+
+    new-instance v0, Landroid/text/StaticLayout;
+
+    invoke-virtual {v9}, Lcom/kk/d/a;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {v9}, Lcom/kk/d/a;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object v2
+
+    move v3, v13
+
+    invoke-static {v9}, Lcom/kk/d/c;->b(Landroid/widget/TextView;)Landroid/text/Layout$Alignment;
+
+    move-result-object v4
+
+    invoke-virtual {v9}, Lcom/kk/d/a;->getLineSpacingMultiplierCompat()F
+
+    move-result v5
+
+    invoke-virtual {v9}, Lcom/kk/d/a;->getLineSpacingExtraCompat()F
+
+    move-result v6
+
+    invoke-virtual {v9}, Lcom/kk/d/a;->getIncludeFontPaddingCompat()Z
+
+    move-result v7
+
+    invoke-direct/range {v0 .. v7}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;FFZ)V
+
+    invoke-virtual {v0}, Landroid/text/Layout;->getLineCount()I
+
+    move-result v1
+
+    if-ne v1, v8, :cond_more
+
+    move-object v12, v0
+
+    move v11, v13
+
+    goto :loop
+
+    :cond_more
+    add-int/lit8 v10, v13, 0x1
+
+    goto :loop
+
+    :done
+    if-eqz v12, :cond_ret
+
+    return-object v12
+
+    :cond_ret
+    return-object p1
 .end method

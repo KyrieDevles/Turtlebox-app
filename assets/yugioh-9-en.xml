@@ -433,12 +433,14 @@
         <item name="light" value="100" />
         <item name="normal" value="200" />
         <item name="full" value="400" />
+        <item name="balanced (reflow)" value="500" />
     </data>
     <data name="justify_pendulum" default="0" desc="Justify Last Line">
         <item name="off" value="0" />
         <item name="light" value="100" />
         <item name="normal" value="200" />
         <item name="full" value="400" />
+        <item name="balanced (reflow)" value="500" />
     </data>
     <data name="maxsize_effect" default="100" desc="Max Font % (100 = normal)" type="text" />
     <data name="minsize_effect" default="0" desc="Min Font % (0 = auto)" type="text" />
@@ -505,6 +507,7 @@
         <item name="light" value="100" />
         <item name="normal" value="200" />
         <item name="full" value="400" />
+        <item name="balanced (reflow)" value="500" />
     </data>
     <data name="maxsize_xros" default="100" desc="Max Font % (100 = normal)" type="text" />
     <data name="minsize_xros" default="0" desc="Min Font % (0 = auto)" type="text" />
