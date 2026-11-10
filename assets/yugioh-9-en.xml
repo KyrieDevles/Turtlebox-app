@@ -450,6 +450,7 @@
         <item name="loose (1.1)" value="1.1" />
         <item name="looser (1.2)" value="1.2" />
     </data>
+    <data name="weight_effect" default="0" desc="Weight (0 = normal, 30 = bold-ish, 60 = heavy)" type="text" />
     <data name="letterspace_effect" default="0" desc="Letter Spacing (em, e.g. 0.02)" type="text" />
     <data name="indent_effect" default="0" desc="First-line Indent (spaces)">
         <item name="none" value="0" />
@@ -479,6 +480,7 @@
         <item name="loose (1.1)" value="1.1" />
         <item name="looser (1.2)" value="1.2" />
     </data>
+    <data name="weight_pendulum" default="0" desc="Weight (0 = normal, 30 = bold-ish, 60 = heavy)" type="text" />
     <data name="letterspace_pendulum" default="0" desc="Letter Spacing (em, e.g. 0.02)" type="text" />
     <data name="indent_pendulum" default="0" desc="First-line Indent (spaces)">
         <item name="none" value="0" />
@@ -517,6 +519,7 @@
         <item name="loose (1.1)" value="1.1" />
         <item name="looser (1.2)" value="1.2" />
     </data>
+    <data name="weight_xros" default="0" desc="Weight (0 = normal, 30 = bold-ish, 60 = heavy)" type="text" />
     <data name="letterspace_xros" default="0" desc="Letter Spacing (em, e.g. 0.02)" type="text" />
     <data name="indent_xros" default="0" desc="First-line Indent (spaces)">
         <item name="none" value="0" />
@@ -550,6 +553,7 @@
         <item name="maxsize_effect" value="maxsize_effect" />
         <item name="minsize_effect" value="minsize_effect" />
         <item name="letterspace_effect" value="letterspace_effect" />
+        <item name="weight_effect" value="weight_effect" />
         <item name="indent_effect" value="indent_effect" />
     </data>
     <data name="cardptextmenu" desc="Pendulum Effect" type="multi_select">
@@ -562,6 +566,7 @@
         <item name="maxsize_pendulum" value="maxsize_pendulum" />
         <item name="minsize_pendulum" value="minsize_pendulum" />
         <item name="letterspace_pendulum" value="letterspace_pendulum" />
+        <item name="weight_pendulum" value="weight_pendulum" />
         <item name="indent_pendulum" value="indent_pendulum" />
     </data>
 
@@ -575,6 +580,7 @@
         <item name="maxsize_xros" value="maxsize_xros" />
         <item name="minsize_xros" value="minsize_xros" />
         <item name="letterspace_xros" value="letterspace_xros" />
+        <item name="weight_xros" value="weight_xros" />
         <item name="indent_xros" value="indent_xros" />
     </data>
 
@@ -1216,6 +1222,7 @@
             <indent>{{indent_pendulum}}</indent>
             <valign>{{valign_pendulum}}</valign>
             <fitmode>{{fitmode_pendulum}}</fitmode>
+            <weight>{{weight_pendulum}}</weight>
             <text>{{cardptext}}</text>
             <visible>{{is_pendulum}}</visible>
         </text> 80 475 30
@@ -1247,6 +1254,7 @@
             <indent>{{indent_effect}}</indent>
             <valign>{{valign_effect}}</valign>
             <fitmode>{{fitmode_effect}}</fitmode>
+            <weight>{{weight_effect}}</weight>
             <text>{{cardtext}}</text>
             <visible>{{is_neuron}} == false</visible>
         </text>
@@ -1363,6 +1371,7 @@
             <indent>{{indent_xros}}</indent>
             <valign>{{valign_xros}}</valign>
             <fitmode>{{fitmode_xros}}</fitmode>
+            <weight>{{weight_xros}}</weight>
             <text>{{xrostext}}</text>
             <visible>{{is_xros}}</visible>
         </text>
@@ -1386,6 +1395,7 @@
             <indent>{{indent_xros}}</indent>
             <valign>{{valign_xros}}</valign>
             <fitmode>{{fitmode_xros}}</fitmode>
+            <weight>{{weight_xros}}</weight>
             <text>{{xrostext}}</text>
             <visible>{{rd_xros}} and {{is_rush}}</visible>
         </text>

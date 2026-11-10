@@ -257,6 +257,10 @@
 
     iput v0, p0, Lcom/kk/d/d;->justifyRatio:F
 
+    iget v0, p1, Lcom/kk/b/a/a/c;->weight:F
+
+    iput v0, p0, Lcom/kk/d/d;->weight:F
+
     iget v0, p1, Lcom/kk/b/a/a/c;->maxsize:F
 
     iput v0, p0, Lcom/kk/d/d;->maxSizePct:F

@@ -38,6 +38,8 @@
 
 .field public justify:F
 
+.field public weight:F
+
 .field public maxsize:F
 
 .field public minsize:F

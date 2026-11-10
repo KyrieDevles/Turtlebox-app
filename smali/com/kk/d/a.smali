@@ -19,6 +19,8 @@
 
 .field public justifyRatio:F
 
+.field public weight:F
+
 .field public maxSizePct:F
 
 .field public minSizePct:F
@@ -588,6 +590,49 @@
 
     .prologue
     .line 213
+    # PATCH: Weight option - thicken glyphs with a thin outline (0 = off)
+    invoke-virtual/range {p0 .. p0}, Lcom/kk/d/a;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object v2
+
+    move-object/from16 v0, p0
+
+    iget v1, v0, Lcom/kk/d/a;->weight:F
+
+    const/4 v3, 0x0
+
+    cmpl-float v3, v1, v3
+
+    if-lez v3, :cond_wt_off
+
+    sget-object v3, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {v2, v3}, Landroid/text/TextPaint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    sget-object v3, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
+
+    invoke-virtual {v2, v3}, Landroid/text/TextPaint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
+
+    invoke-virtual {v2}, Landroid/text/TextPaint;->getTextSize()F
+
+    move-result v3
+
+    mul-float/2addr v3, v1
+
+    const/high16 v1, 0x447a0000    # 1000.0f
+
+    div-float/2addr v3, v1
+
+    invoke-virtual {v2, v3}, Landroid/text/TextPaint;->setStrokeWidth(F)V
+
+    goto :cond_wt_end
+
+    :cond_wt_off
+    sget-object v3, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {v2, v3}, Landroid/text/TextPaint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    :cond_wt_end
     move-object/from16 v0, p0
 
     iget-boolean v1, v0, Lcom/kk/d/a;->j:Z

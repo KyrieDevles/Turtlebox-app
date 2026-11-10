@@ -34,6 +34,12 @@
     .end annotation
 .end field
 
+.field protected weight:[Lcom/kk/b/c/h;
+    .annotation runtime La/a/a/b;
+        a = "weight"
+    .end annotation
+.end field
+
 .field protected maxsize:[Lcom/kk/b/c/h;
     .annotation runtime La/a/a/b;
         a = "maxsize"
@@ -176,6 +182,14 @@
     .locals 1
 
     iget-object v0, p0, Lcom/kk/b/a/b/c;->justify:[Lcom/kk/b/c/h;
+
+    return-object v0
+.end method
+
+.method public getWeight()[Lcom/kk/b/c/h;
+    .locals 1
+
+    iget-object v0, p0, Lcom/kk/b/a/b/c;->weight:[Lcom/kk/b/c/h;
 
     return-object v0
 .end method

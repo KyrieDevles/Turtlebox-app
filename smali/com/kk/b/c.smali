@@ -1336,6 +1336,36 @@
 
     :cond_maxsize_skip
 
+    # ---- PATCH: <weight> element -> TextData.weight (0 = not set) ----
+    invoke-virtual {p1}, Lcom/kk/b/a/b/c;->getWeight()[Lcom/kk/b/c/h;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->a([Lcom/kk/b/c/i;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v0, :cond_weight_skip
+
+    invoke-virtual {p0, v0}, Lcom/kk/b/c;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_weight_skip
+
+    :try_weight_s
+    invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v0
+
+    iput v0, v1, Lcom/kk/b/a/a/c;->weight:F
+    :try_weight_e
+    .catch Ljava/lang/NumberFormatException; {:try_weight_s .. :try_weight_e} :cond_weight_skip
+
+    :cond_weight_skip
+
     # ---- PATCH: <minsize> element -> TextData.minsize (0 = not set) ----
     invoke-virtual {p1}, Lcom/kk/b/a/b/c;->getMinSize()[Lcom/kk/b/c/h;
 
