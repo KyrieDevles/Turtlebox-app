@@ -1359,7 +1359,8 @@
             <size height="78" left="65" top="385" when="{{xros_big}}" width="290" />
             <size height="61.9" left="38" top="388" width="345" />
             <align>left</align>
-            <color>#ffffff</color>
+            <color when="{{is_rush}}">#ffffff</color>
+            <color>#000000</color>
             <font name="font/MatrixBook.ttf" style="bold" size="12" />
             <condense>{{condense}}</condense>
             <minline>{{minline_xros}}</minline>
